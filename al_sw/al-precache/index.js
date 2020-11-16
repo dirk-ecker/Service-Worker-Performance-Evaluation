@@ -1,30 +1,23 @@
-((document, navigator) => {
+(async (document, navigator) => {
+  const $ = document.querySelector.bind(document)
+  // add image selection listener to select
+  $('#image-selector').onchange = () => {
+    const imgUrl = $('select').value
+    if (imgUrl) {
+      $('img').src = imgUrl
+    }
+  }
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {     
-              console.log(`Service Worker registered! Scope: ${registration.scope}`);
-            })
-            .catch(err => {
-              console.log(`Service Worker registration failed: ${err}`);
-            });
-            navigator.serviceWorker.ready.then(enableUI)
-        });
-        if (navigator && navigator.connection) {
-          console.log(navigator.connection);
-        };
-      }
+  // register service worker
+  try {
+    const registration = await navigator.serviceWorker.register('/sw.js')
+    registration && console.log(`sw registered, scope: ${registration.scope}`)
 
-    const $ = document.querySelector.bind(document)
-    $('#image-selector').onchange = () => {
-        const imgUrl = $('select').value;
-        if (imgUrl) {
-            $('img').src = imgUrl
-        }
-    };
-    const enableUI = async () => {
-        $('#image-selector').disabled = false
-      }
-
+    navigator.serviceWorker.ready.then(() => {
+      $('#image-selector').disabled = false
+    })
+  } catch(error) {
+    console.log(`sw registration failed: ${error}`)
+  }
+  // navigator?.connection && console.log(navigator.connection)
 })(document, navigator)

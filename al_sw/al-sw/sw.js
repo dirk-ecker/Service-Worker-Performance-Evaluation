@@ -28,6 +28,7 @@ self.addEventListener('fetch', event => {
       const imageURLParts = event.request.url.split('/')
       imageURLParts.splice(imageURLParts.length - 1, 0, imageQuality)
       const finalImageURL = new URL(imageURLParts.join('/'))
+      console.log(`fetching ${finalImageURL}`)
       event.respondWith(
         fetch(finalImageURL.href, { headers: event.request.headers })
       )
