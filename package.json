@@ -1,0 +1,21 @@
+{
+  "name": "service-worker-performance-evaluation",
+  "version": "1.0.0",
+  "description": "Putting together the use cases and evaluating the performance impact of the service workers on rendering performance",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XeniaW/Service-Worker-Performance-Evaluation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XeniaW/Service-Worker-Performance-Evaluation/issues"
+  },
+  "homepage": "https://github.com/XeniaW/Service-Worker-Performance-Evaluation#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
