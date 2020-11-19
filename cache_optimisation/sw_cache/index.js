@@ -25,6 +25,10 @@
         }
       }
       image(3);
+
+      $('img').onload = () => {
+        console.log('img onload', src) 
+      }
      
 
 })(document, navigator)
