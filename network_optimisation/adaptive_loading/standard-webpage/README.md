@@ -1,7 +1,7 @@
 # Beschreibung
 
 # TODO
-al-no-sw ist kein sprechender Name.
+
 
 # Ergebnisse
 Initial lädt der Browser alles vom Server.
