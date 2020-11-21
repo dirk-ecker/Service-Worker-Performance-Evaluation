@@ -29,10 +29,6 @@
   try {
     const registration = await navigator.serviceWorker.register('./sw.js')
     registration && console.log(`sw registered, scope: ${registration.scope}`)
-
-    navigator.serviceWorker.ready.then(() => {
-      $('#image-selector').disabled = false
-    })
   } catch(error) {
     console.log(`sw registration failed: ${error}`)
   }
@@ -45,7 +41,6 @@
       row.appendChild(img)
       console.log('img path', imgPath)
     }
-
   }
   image(3)
 

@@ -1,30 +1,23 @@
-((document, navigator) => {
+(async (document, navigator) => {
 
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {     
-              console.log(`Service Worker registered! Scope: ${registration.scope}`);
-            })
-            .catch(err => {
-              console.log(`Service Worker registration failed: ${err}`);
-            });
-            // navigator.serviceWorker.ready.then(enableUI)
-        });
-        if (navigator && navigator.connection) {
-          // console.log(navigator.connection);
-        };
-      }
+  // register service worker
+  try {
+    const registration = await navigator.serviceWorker.register('./sw.js')
+    registration && console.log(`sw registered, scope: ${registration.scope}`)
+  } catch(error) {
+    console.log(`sw registration failed: ${error}`)
+  }
+  // navigator?.connection && console.log(navigator.connection)
 
-      function image(num) {
-        for (i=1; i<num+1; i++) {
-          var img = document.createElement("img");
-          img.src = "images/"+ i +".jpg";
-          var row = document.getElementById("row");
-          row.appendChild(img);
-        }
-      }
-      image(3);
-
+  const image = num => {
+    for (let i=1; i<num+1; i++) {
+      const img = document.createElement("img")
+      const imgPath = img.src = "images/"+ i +".jpg"
+      const row = document.getElementById("row")
+      row.appendChild(img)
+      console.log('img path', imgPath)
+    }
+  }
+  image(3)
 
 })(document, navigator)
