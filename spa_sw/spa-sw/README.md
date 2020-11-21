@@ -1,6 +1,0 @@
-# Beschreibung
-
-
-# TODO
-
-# Ergebnisse
