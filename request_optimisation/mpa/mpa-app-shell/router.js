@@ -9,8 +9,6 @@ const router = express.Router()
 const PAGES = [
   { path: '/', page: 'pages/home.html' },
   { path: '/content1', page: 'pages/content1.html' },
-  { path: '/content2', page: 'pages/content2.html' },
-  { path: '/content1/streaming', page: 'pages/content1.streaming.html'}
 ]
 
 PAGES.forEach(({ path, page }) => {
@@ -21,20 +19,20 @@ PAGES.forEach(({ path, page }) => {
  
 })
 
-router.use('/views', express.static(__dirname + '/views/', { maxAge: '1y' })) // define path for partial caching
+router.use('/views', express.static(__dirname + '/views/', { maxAge: '0' })) // define path for partial caching - default '1y' changed to 0 to deactivate http caching, otherwise the cache changes from sw are surpressed
 
 router.get('/sw.js', (req,res) => {
   res.set('Content-Type', 'application/javascript') //MIME type
   // const input = fs.createReadStream(`${__dirname}/sw.js`)
   const input = fs.createReadStream('sw.js')
   const toCache = [
-    'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
-    'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
-    'https://code.jquery.com/jquery-3.3.1.slim.min.js',
-    './views/partials/footer.html',
     './views/partials/header.html',
-    './views/partials/offline.html'
+    './views/partials/footer.html',
+    './views/partials/offline.html',
+    './views/bs/bootstrap.min.css',
+    './views/bs/bootstrap.min.js',
+    './views/bs/popper.min.js',
+    './views/bs/jquery-3.3.1.slim.min.js',
   ]
 
  input.pipe(staticModule({   //static module is available inside js
