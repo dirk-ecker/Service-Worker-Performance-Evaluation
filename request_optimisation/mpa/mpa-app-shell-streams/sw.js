@@ -1,5 +1,8 @@
-const toCache = require('static-to-cache')();
+// Incrementing OFFLINE_VERSION will kick off the install event and force
+// previously cached resources to be updated from the network.
+const OFFLINE_VERSION = 1
 
+const toCache = require('static-to-cache')();
 
 addEventListener('install', event => {
   skipWaiting();
@@ -45,8 +48,7 @@ class IdentityStream {
 
 function streamedContent(event, url) {
   const includeUrl = new URL(url);
-  includeUrl.pathname += '/streaming';
-   //return new Response ("streamed");
+
     const parts = [
      caches.match('./views/partials/header.html'),
      fetch(includeUrl).catch(() => caches.match('views/partials/offline.html')),
