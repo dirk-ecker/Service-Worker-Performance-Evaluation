@@ -12,12 +12,11 @@ const PAGES = [
 ]
 
 PAGES.forEach(({ path, page }) => {
-  
   router.get(path, (req,res, next) => {
     res.render(page)
   });
  
-})
+});
 
 router.use('/views', express.static(__dirname + '/views/', { maxAge: '1y' })) // define path for partial caching
 
