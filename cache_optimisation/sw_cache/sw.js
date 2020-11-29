@@ -1,11 +1,8 @@
 // const {imgUrls} = require('./index.js');
 const imgUrls = [
-  './images/1.jpg',
+  './images_hq/1.jpg',
+  './images_lq/1.jpg'
  
-];
-const textUrls = [
-  './text/1.txt',
-
 ];
  
  self.addEventListener('install', (event) => {
@@ -13,8 +10,8 @@ const textUrls = [
     event.waitUntil(async function () {
       // const cache = await caches.open('img_cache');
       // await cache.addAll(imgUrls);
-      const cache = await caches.open('text_cache');
-      await cache.addAll(textUrls);
+      const cache = await caches.open('img_cache');
+      await cache.addAll(imgUrls);
      }());
     self.skipWaiting() // Force the waiting service worker to become the active service worker.
     console.log('sw end install')

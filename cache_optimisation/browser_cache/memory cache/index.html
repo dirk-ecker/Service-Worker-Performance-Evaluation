@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Cache - Memory Cache</title>
+  <style>
+    img {
+      width: 50%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    #row {
+      display: inline-table;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <h1>Browser Cache</h1>
+      <div id="row"></div>
+      <script>
+        //Loading of image files - from Memory Cache
+        imgUrls = [];
+        const image = num => {
+          for (let i = 1; i < num + 1; i++) {
+            const img = document.createElement("img")
+            const imgPath = img.src = "images_hq/" + i + ".jpg"
+            const row = document.getElementById("row")
+            row.appendChild(img)
+            imgUrls.push(imgPath);
+          }
+        }
+        image(10)
+      </script>
+    </div>
+  </div>
+  <script src="perf.js"></script>
+</body>
+
+</html>

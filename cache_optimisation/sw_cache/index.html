@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Browser Cache</title>
   <style>
-    img{
-        width:50%;
-        height:auto;
-        margin-bottom: 10px;
-        display: inline-table;
+    img {
+      width: 50%;
+      height: auto;
+      margin-bottom: 10px;
+      display: inline-table;
     }
   </style>
 </head>
@@ -18,11 +19,46 @@
   <div class="container-fluid">
     <div class="container">
       <h1>Service Worker Cache</h1>
-      <div id="row">
-        
-      </div>
+      <div id="row"></div>
     </div>
+    <script>
+      var row = document.getElementById("row")
+      // Loading of image files - from Disk Cache
+      const image = num => {
+        for (let i = 1; i < num + 1; i++) {
+          const imgPath = "images_hq/1.jpg"
+          // avoid blob request ?
+          fetch(imgPath)
+            .then(response => response.blob())
+            .then(function (response) {
+              // console.log('response', response);
+              var objectURL = URL.createObjectURL(response);
+              const img = document.createElement("img");
+              img.src = objectURL;
+              row.appendChild(img)
+
+            });
+        }
+      }
+      image(30)
+
+      //Loading of image files - from Memory Cache
+      // imgUrls = [];
+      // const image = num => {
+      //   for (let i = 1; i < num + 1; i++) {
+      //     const img = document.createElement("img")
+      //     const imgPath = img.src = "images_hq/" + i + ".jpg"
+      //     const row = document.getElementById("row")
+      //     row.appendChild(img)
+      //     console.log('img path', imgPath)
+      //     imgUrls.push(imgPath);
+      //   }
+      // }
+      // image(10)
+    </script>
   </div>
-  <script src ="index.js"></script>
+  <script src="index.js"></script>
+  <script src="perf.js"></script>
 </body>
+
 </html>
