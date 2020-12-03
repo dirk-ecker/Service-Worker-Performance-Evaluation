@@ -1,0 +1,180 @@
+
+first-paint : 122.89500000770204ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.2649999805726111
+DOM complete = 123.80000000121072
+DOM interactive = undefined
+document load = 0.8749999979045242
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":124.68499998794869,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.18999999156221747,"domainLookupStart":22.259999997913837,"domainLookupEnd":22.265000006882474,"connectStart":22.265000006882474,"connectEnd":22.714999999152496,"secureConnectionStart":0,"requestStart":22.779999999329448,"responseStart":23.88500000233762,"responseEnd":24.58999998634681,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":123.41999998898245,"domContentLoadedEventStart":123.46500001149252,"domContentLoadedEventEnd":123.72999999206513,"domComplete":123.80000000121072,"loadEventStart":123.80999999004416,"loadEventEnd":124.68499998794869,"type":"navigate","redirectCount":0}
+first-paint : 38.3049999945797ms.
+DOM content loaded = 0.12000001152046025
+DOM complete = 53.58999999589287
+DOM interactive = undefined
+document load = 0.5949999904260039
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":54.18499998631887,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.1699999740812927,"redirectStart":0,"redirectEnd":0,"fetchStart":1.4799999771639705,"domainLookupStart":1.4799999771639705,"domainLookupEnd":1.4799999771639705,"connectStart":1.4799999771639705,"connectEnd":1.4799999771639705,"secureConnectionStart":0,"requestStart":1.4799999771639705,"responseStart":9.05999998212792,"responseEnd":9.57999998354353,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.57999997283332,"unloadEventEnd":10.57999997283332,"domInteractive":53.36999997962266,"domContentLoadedEventStart":53.38999998639338,"domContentLoadedEventEnd":53.50999999791384,"domComplete":53.58999999589287,"loadEventStart":53.58999999589287,"loadEventEnd":54.18499998631887,"type":"navigate","redirectCount":0}
+first-paint : 106.09999997541308ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3649999853223562
+DOM complete = 108.45999998855405
+DOM interactive = undefined
+document load = 0.9800000116229057
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":109.4499999890104,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.15999999595806003,"domainLookupStart":23.93499997560866,"domainLookupEnd":23.944999993545935,"connectStart":23.944999993545935,"connectEnd":24.37999998801388,"secureConnectionStart":0,"requestStart":24.439999979222193,"responseStart":25.234999979147688,"responseEnd":25.909999996656552,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":107.95999999390915,"domContentLoadedEventStart":107.99499999848194,"domContentLoadedEventEnd":108.3599999838043,"domComplete":108.45999998855405,"loadEventStart":108.46999997738749,"loadEventEnd":109.4499999890104,"type":"navigate","redirectCount":0}
+first-paint : 38.570000004256144ms.
+DOM content loaded = 0.1550000160932541
+DOM complete = 55.40000001201406
+DOM interactive = undefined
+document load = 0.5149999924469739
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":55.92499999329448,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.049999991664663,"redirectStart":0,"redirectEnd":0,"fetchStart":1.3599999947473407,"domainLookupStart":1.3599999947473407,"domainLookupEnd":1.3599999947473407,"connectStart":1.3599999947473407,"connectEnd":1.3599999947473407,"secureConnectionStart":0,"requestStart":1.3599999947473407,"responseStart":9.229999996023253,"responseEnd":9.745000017574057,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.810000007040799,"unloadEventEnd":10.810000007040799,"domInteractive":55.03000001772307,"domContentLoadedEventStart":55.099999997764826,"domContentLoadedEventEnd":55.25500001385808,"domComplete":55.40000001201406,"loadEventStart":55.4100000008475,"loadEventEnd":55.92499999329448,"type":"navigate","redirectCount":0}
+first-paint : 99.5450000045821ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3600000054575503
+DOM complete = 101.38500001630746
+DOM interactive = undefined
+document load = 0.8700000180397183
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":102.26000001421198,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.1449999981559813,"domainLookupStart":19.75000000675209,"domainLookupEnd":19.755000015720725,"connectStart":19.755000015720725,"connectEnd":20.235000003594905,"secureConnectionStart":0,"requestStart":20.300000003771856,"responseStart":21.09500000369735,"responseEnd":21.780000010039657,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":100.91000000829808,"domContentLoadedEventStart":100.9349999949336,"domContentLoadedEventEnd":101.29500000039116,"domComplete":101.38500001630746,"loadEventStart":101.38999999617226,"loadEventEnd":102.26000001421198,"type":"navigate","redirectCount":0}
+first-paint : 39.3999999796506ms.
+DOM content loaded = 0.12499999138526618
+DOM complete = 57.49499998637475
+DOM interactive = undefined
+document load = 0.35500002559274435
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":57.86000000080094,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.1700000031851232,"redirectStart":0,"redirectEnd":0,"fetchStart":1.4149999769870192,"domainLookupStart":1.4149999769870192,"domainLookupEnd":1.4149999769870192,"connectStart":1.4149999769870192,"connectEnd":1.4149999769870192,"secureConnectionStart":0,"requestStart":1.4149999769870192,"responseStart":9.65999998152256,"responseEnd":10.175000003073364,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":11.494999984279275,"unloadEventEnd":11.494999984279275,"domInteractive":57.21499997889623,"domContentLoadedEventStart":57.24500000360422,"domContentLoadedEventEnd":57.369999994989485,"domComplete":57.49499998637475,"loadEventStart":57.50499997520819,"loadEventEnd":57.86000000080094,"type":"navigate","redirectCount":0}
+first-paint : 99.1550000035204ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.375000003259629
+DOM complete = 101.6550000058487
+DOM interactive = undefined
+document load = 0.9049999935086817
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":102.56999998819083,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.13500000932253897,"domainLookupStart":20.129999989876524,"domainLookupEnd":20.140000007813796,"connectStart":20.140000007813796,"connectEnd":20.569999993313104,"secureConnectionStart":0,"requestStart":20.63000001362525,"responseStart":21.399999997811392,"responseEnd":22.13500000652857,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":101.15000000223517,"domContentLoadedEventStart":101.17999999783933,"domContentLoadedEventEnd":101.55500000109896,"domComplete":101.6550000058487,"loadEventStart":101.66499999468215,"loadEventEnd":102.56999998819083,"type":"navigate","redirectCount":0}
+first-paint : 40.0750000262633ms.
+DOM content loaded = 0.13000000035390258
+DOM complete = 55.21500000031665
+DOM interactive = undefined
+document load = 0.34500000765547156
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":55.56500001694076,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.1750000121537596,"redirectStart":0,"redirectEnd":0,"fetchStart":1.400000008288771,"domainLookupStart":1.400000008288771,"domainLookupEnd":1.400000008288771,"connectStart":1.400000008288771,"connectEnd":1.400000008288771,"secureConnectionStart":0,"requestStart":1.400000008288771,"responseStart":9.235000004991889,"responseEnd":9.775000013178214,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.820000024978071,"unloadEventEnd":10.820000024978071,"domInteractive":54.92500000400469,"domContentLoadedEventStart":54.97500000637956,"domContentLoadedEventEnd":55.10500000673346,"domComplete":55.21500000031665,"loadEventStart":55.220000009285286,"loadEventEnd":55.56500001694076,"type":"navigate","redirectCount":0}
+first-paint : 98.98499998962507ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3499999875202775
+DOM complete = 100.895000010496
+DOM interactive = undefined
+document load = 1.0300000139977783
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":101.93000000435859,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.15499998698942363,"domainLookupStart":20.289999985834584,"domainLookupEnd":20.29499999480322,"connectStart":20.29499999480322,"connectEnd":20.74999999604188,"secureConnectionStart":0,"requestStart":20.81499999621883,"responseStart":21.55000000493601,"responseEnd":22.315000009257346,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":100.40999998454936,"domContentLoadedEventStart":100.44000000925735,"domContentLoadedEventEnd":100.78999999677762,"domComplete":100.895000010496,"loadEventStart":100.89999999036081,"loadEventEnd":101.93000000435859,"type":"navigate","redirectCount":0}
+first-paint : 38.92500000074506ms.
+DOM content loaded = 0.12499999138526618
+DOM complete = 55.5750000057742
+DOM interactive = undefined
+document load = 0.5200000014156103
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":56.10499999602325,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.0149999870918691,"redirectStart":0,"redirectEnd":0,"fetchStart":1.2700000079348683,"domainLookupStart":1.2700000079348683,"domainLookupEnd":1.2700000079348683,"connectStart":1.2700000079348683,"connectEnd":1.2700000079348683,"secureConnectionStart":0,"requestStart":1.2700000079348683,"responseStart":9.22000000718981,"responseEnd":9.879999997792765,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.650000011082739,"unloadEventEnd":10.650000011082739,"domInteractive":54.16500000865199,"domContentLoadedEventStart":54.21500001102686,"domContentLoadedEventEnd":54.340000002412125,"domComplete":55.5750000057742,"loadEventStart":55.58499999460764,"loadEventEnd":56.10499999602325,"type":"navigate","redirectCount":0}
+first-paint : 1975.1549999928102ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3600000054575503
+DOM complete = 1988.5950000025332
+DOM interactive = undefined
+document load = 1.0300000139977783
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":1989.6299999963958,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.18499998259358108,"domainLookupStart":1903.7050000042655,"domainLookupEnd":1903.954999987036,"connectStart":1903.954999987036,"connectEnd":1904.3749999837019,"secureConnectionStart":0,"requestStart":1904.4299999950454,"responseStart":1905.2499999816064,"responseEnd":1906.2299999932293,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":1988.1149999855552,"domContentLoadedEventStart":1988.1449999811593,"domContentLoadedEventEnd":1988.504999986617,"domComplete":1988.5950000025332,"loadEventStart":1988.599999982398,"loadEventEnd":1989.6299999963958,"type":"navigate","redirectCount":0}
+DOM content loaded = 0.2049999893642962
+DOM complete = 56.01500000921078
+DOM interactive = undefined
+document load = 0.4199999966658652
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":56.450000003678724,"initiatorType":"navigation","nextHopProtocol":"","workerStart":0.9950000094249845,"redirectStart":0,"redirectEnd":0,"fetchStart":1.2950000236742198,"domainLookupStart":1.2950000236742198,"domainLookupEnd":1.2950000236742198,"connectStart":1.2950000236742198,"connectEnd":1.2950000236742198,"secureConnectionStart":0,"requestStart":1.2950000236742198,"responseStart":9.145000018179417,"responseEnd":9.625000006053597,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.67500002682209,"unloadEventEnd":10.67500002682209,"domInteractive":55.72500001289882,"domContentLoadedEventStart":55.76000001747161,"domContentLoadedEventEnd":55.96500000683591,"domComplete":56.01500000921078,"loadEventStart":56.03000000701286,"loadEventEnd":56.450000003678724,"type":"navigate","redirectCount":0}
+first-paint : 82.66999997431412ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3649999853223562
+DOM complete = 95.54999999818392
+DOM interactive = undefined
+document load = 0.9900000004563481
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":96.54999998747371,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.18499998259358108,"domainLookupStart":19.07999999821186,"domainLookupEnd":19.089999987045303,"connectStart":19.089999987045303,"connectEnd":19.509999983711168,"secureConnectionStart":0,"requestStart":19.564999995054677,"responseStart":20.29499999480322,"responseEnd":20.94999997643754,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":95.06499997223727,"domContentLoadedEventStart":95.09499999694526,"domContentLoadedEventEnd":95.45999998226762,"domComplete":95.54999999818392,"loadEventStart":95.55999998701736,"loadEventEnd":96.54999998747371,"type":"navigate","redirectCount":0}
+first-paint : 37.170000025071204ms.
+DOM content loaded = 0.12000001152046025
+DOM complete = 53.980000026058406
+DOM interactive = undefined
+document load = 0.4400000034365803
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":54.43000001832843,"initiatorType":"navigation","nextHopProtocol":"","workerStart":0.9900000004563481,"redirectStart":0,"redirectEnd":0,"fetchStart":1.2550000101327896,"domainLookupStart":1.2550000101327896,"domainLookupEnd":1.2550000101327896,"connectStart":1.2550000101327896,"connectEnd":1.2550000101327896,"secureConnectionStart":0,"requestStart":1.2550000101327896,"responseStart":8.865000010700896,"responseEnd":9.350000007543713,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.39500001934357,"unloadEventEnd":10.39500001934357,"domInteractive":53.73000001418404,"domContentLoadedEventStart":53.7600000097882,"domContentLoadedEventEnd":53.88000002130866,"domComplete":53.980000026058406,"loadEventStart":53.99000001489185,"loadEventEnd":54.43000001832843,"type":"navigate","redirectCount":0}
+first-paint : 91.05999997700565ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.2649999805726111
+DOM complete = 102.33999998308718
+DOM interactive = undefined
+document load = 0.8199999865610152
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":103.16499997861683,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.18000000272877514,"domainLookupStart":20.369999983813614,"domainLookupEnd":20.380000001750886,"connectStart":20.380000001750886,"connectEnd":20.83999998285435,"secureConnectionStart":0,"requestStart":20.900000003166497,"responseStart":21.825000003445894,"responseEnd":22.570000000996515,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":101.96499997982755,"domContentLoadedEventStart":101.9899999955669,"domContentLoadedEventEnd":102.25499997613952,"domComplete":102.33999998308718,"loadEventStart":102.34499999205582,"loadEventEnd":103.16499997861683,"type":"navigate","redirectCount":0}
+first-paint : 38.609999988693744ms.
+DOM content loaded = 0.1700000138953328
+DOM complete = 54.47999999159947
+DOM interactive = undefined
+document load = 0.4600000102072954
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":54.96000000857748,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.129999989643693,"redirectStart":0,"redirectEnd":0,"fetchStart":1.3800000015180558,"domainLookupStart":1.3800000015180558,"domainLookupEnd":1.3800000015180558,"connectStart":1.3800000015180558,"connectEnd":1.3800000015180558,"secureConnectionStart":0,"requestStart":1.3800000015180558,"responseStart":9.079999988898635,"responseEnd":9.569999994710088,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.529999999562278,"unloadEventEnd":10.529999999562278,"domInteractive":54.13500001304783,"domContentLoadedEventStart":54.17499999748543,"domContentLoadedEventEnd":54.34500001138076,"domComplete":54.47999999159947,"loadEventStart":54.499999998370185,"loadEventEnd":54.96000000857748,"type":"navigate","redirectCount":0}
+first-paint : 99.16499999235384ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3100000030826777
+DOM complete = 101.7649999994319
+DOM interactive = undefined
+document load = 1.049999991664663
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":102.82499997993,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.13000000035390258,"domainLookupStart":21.26999999745749,"domainLookupEnd":21.274999977322295,"connectStart":21.274999977322295,"connectEnd":21.72499999869615,"secureConnectionStart":0,"requestStart":21.784999989904463,"responseStart":22.48499999404885,"responseEnd":23.119999998016283,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":101.33999999379739,"domContentLoadedEventStart":101.36999998940155,"domContentLoadedEventEnd":101.67999999248423,"domComplete":101.7649999994319,"loadEventStart":101.77499998826534,"loadEventEnd":102.82499997993,"type":"navigate","redirectCount":0}
+first-paint : 35.795000003417954ms.
+DOM content loaded = 0.12000001152046025
+DOM complete = 53.92000000574626
+DOM interactive = undefined
+document load = 0.4250000056345016
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":54.355000000214204,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.0649999894667417,"redirectStart":0,"redirectEnd":0,"fetchStart":1.2949999945703894,"domainLookupStart":1.2949999945703894,"domainLookupEnd":1.2949999945703894,"connectStart":1.2949999945703894,"connectEnd":1.2949999945703894,"secureConnectionStart":0,"requestStart":1.2949999945703894,"responseStart":9.064999991096556,"responseEnd":9.69999999506399,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.5549999861978,"unloadEventEnd":10.5549999861978,"domInteractive":53.63999999826774,"domContentLoadedEventStart":53.6699999938719,"domContentLoadedEventEnd":53.79000000539236,"domComplete":53.92000000574626,"loadEventStart":53.9299999945797,"loadEventEnd":54.355000000214204,"type":"navigate","redirectCount":0}
+first-paint : 100.99999999511056ms.SW scope: http://localhost:3000/
+DOM content loaded = 0.3549999964889139
+DOM complete = 102.85499997553416
+DOM interactive = undefined
+document load = 0.9450000070501119
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":103.81000000052154,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":0.13499998021870852,"domainLookupStart":21.609999996144325,"domainLookupEnd":21.624999993946403,"connectStart":21.624999993946403,"connectEnd":22.039999981643632,"secureConnectionStart":0,"requestStart":22.100000001955777,"responseStart":22.839999990537763,"responseEnd":23.634999990463257,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":102.37999999662861,"domContentLoadedEventStart":102.41999998106621,"domContentLoadedEventEnd":102.77499997755513,"domComplete":102.85499997553416,"loadEventStart":102.86499999347143,"loadEventEnd":103.81000000052154,"type":"navigate","redirectCount":0}
+first-paint : 35.55999998934567ms.
+DOM content loaded = 0.06999998004175723
+DOM complete = 52.14499999419786
+DOM interactive = undefined
+document load = 0.5800000217277557
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":52.740000013727695,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.0849999962374568,"redirectStart":0,"redirectEnd":0,"fetchStart":1.4049999881535769,"domainLookupStart":1.4049999881535769,"domainLookupEnd":1.4049999881535769,"connectStart":1.4049999881535769,"connectEnd":1.4049999881535769,"secureConnectionStart":0,"requestStart":1.4049999881535769,"responseStart":8.984999993117526,"responseEnd":9.41999998758547,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":10.440000012749806,"unloadEventEnd":10.440000012749806,"domInteractive":51.91000000922941,"domContentLoadedEventStart":51.925000007031485,"domContentLoadedEventEnd":51.99499998707324,"domComplete":52.14499999419786,"loadEventStart":52.15999999199994,"loadEventEnd":52.740000013727695,"type":"navigate","redirectCount":0}

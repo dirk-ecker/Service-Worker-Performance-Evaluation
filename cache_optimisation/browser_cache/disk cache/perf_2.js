@@ -1,5 +1,5 @@
-window.onload = function() {
-function showPaintTimings1() {
+window.addEventListener('load', (event) => {
+  function showPaintTimings1() {
     if (window.performance) {
       let performance = window.performance;
       let performanceEntries = performance.getEntriesByType('paint');
@@ -17,7 +17,7 @@ function showPaintTimings2() {
       startTime
     }) => {
       console.log('\n' + `${name}` + " : " + `${startTime}` + "ms.");
-      //total.push(startTime);
+      total.push(startTime);
       // console.log('[showPaintTimingsResult]', JSON.stringify(list.getEntriesByType('paint')))
     });
   });
@@ -38,7 +38,7 @@ function showPaintTimings2() {
     console.log("resource timing total:" + totalDiff.toFixed(4))
   }
   function print_start_and_end_properties(perfEntry) {
-    if (perfEntry.initiatorType == "img") {
+    if (perfEntry.initiatorType == "fetch") {
     // Print timestamps of the PerformanceEntry *start and *end properties 
     properties = ["connectStart", "connectEnd",
                   "domainLookupStart", "domainLookupEnd",
@@ -57,9 +57,9 @@ function showPaintTimings2() {
        console.log("resource timing:" + resVal.toFixed(4) + "ms");      
   }
 }
+  showPaintTimings1()
   showPaintTimings2()
   print_PerformanceEntries()
-  showPaintTimings1()
+
   
-  
-}
+});

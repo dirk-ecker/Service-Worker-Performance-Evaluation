@@ -11,9 +11,9 @@
 export default {
   name: 'Content1'
 }
+
 </script>
 <style scoped>
-
 img {
   width: 50%;
 }

@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', (event) => {
   // function showPaintTimings() {
   //     if (window.performance) {
   //       let performance = window.performance;
@@ -10,20 +10,19 @@ window.onload = function() {
   //       console.log('Performance timing isn\'t supported.');
   //     }
   //   }
-   
-  function showPaintTimings() {
+   function showPaintTimings() {
     const observer = new window.PerformanceObserver(list => {
       list.getEntries().forEach(({
         name,
         startTime
       }) => {
         console.log('\n' + `${name}` + " : " + `${startTime}` + "ms.");
-
-        // console.log('[showPaintTimingsResult]', JSON.stringify(list.getEntriesByType('paint')))
+        //total.push(startTime);
+         console.log('[showPaintTimingsResult]', JSON.stringify(list.getEntriesByType('paint')))
       });
     });
     observer.observe({
-      entryTypes: ['paint']
+      entryTypes: ['paint', 'resource']
     });
   }
 
@@ -39,40 +38,36 @@ window.onload = function() {
     // console.log("resource timing total:" + totalDiff.toFixed(4))
     const observer = new window.PerformanceObserver(list=> {
       list.getEntries().forEach(entry => {
-        //  const resourceTiming = JSON.parse(entry)
-        //  console.log(resourceTiming);
-        //const logoResourceTiming = resourceTiming.find(element => element.name.includes('.jpg'))
-        if (entry.initiatorType == "fetch") {
-          properties = ["connectStart", "connectEnd",
-            "domainLookupStart", "domainLookupEnd",
-            "fetchStart",
-            "redirectStart", "redirectEnd",
-            "requestStart",
-            "responseStart", "responseEnd",
-            "secureConnectionStart"
-          ];
-          //console.log("resource initiator type:" + entry.initiatorType)
-          var respEndValue = entry[properties[9]];
-          var fetchStartValue = entry[properties[4]];
-          var resVal = respEndValue - fetchStartValue;
-          totalResTime.push(resVal);
-          console.log("resource timing:" + resVal.toFixed(4) + "ms");
+          console.log(entry);
+          // properties = ["connectStart", "connectEnd",
+          //   "domainLookupStart", "domainLookupEnd",
+          //   "fetchStart",
+          //   "redirectStart", "redirectEnd",
+          //   "requestStart",
+          //   "responseStart", "responseEnd",
+          //   "secureConnectionStart"
+          // ];
+          // console.log("resource initiator type:" + entry.initiatorType)
+          // var respEndValue = entry[properties[9]];
+          // var fetchStartValue = entry[properties[4]];
+          // var resVal = respEndValue - fetchStartValue;
+          // totalResTime.push(resVal);
+          // console.log("resource timing:" + resVal.toFixed(4) + "ms");
          
-        }
+        
       });
-      //console.log('[showResourceTimingsResult]',  JSON.stringify(list.getEntriesByType('resource')));
+      console.log('[showResourceTimingsResult]',  JSON.stringify(list.getEntriesByType('resource')));
     });
     
     observer.observe({
-      entryTypes: ['resource'],
-      buffer: true
+      entryTypes: ['resource']
     });
    
     
   }
  
   function print_start_and_end_properties(perfEntry) {
-    if (perfEntry.initiatorType == "fetch") {
+    if (perfEntry.initiatorType == "img") {
       // Print timestamps of the PerformanceEntry *start and *end properties 
       properties = ["connectStart", "connectEnd",
         "domainLookupStart", "domainLookupEnd",
@@ -93,6 +88,6 @@ window.onload = function() {
 
 
   showPaintTimings()
-  print_PerformanceEntries()
+  //print_PerformanceEntries()
  
-}
+});

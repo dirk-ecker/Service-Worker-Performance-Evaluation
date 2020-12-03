@@ -1,15 +1,5 @@
-window.onload = function() {
-function showPaintTimings() {
-    if (window.performance) {
-      let performance = window.performance;
-      let performanceEntries = performance.getEntriesByType('paint');
-      performanceEntries.forEach( (performanceEntry, i, entries) => {
-        console.log( performanceEntry.name + " : " + `${ Math.round(performanceEntry.startTime)}` + "ms.");
-      });
-    } else {
-      console.log('Performance timing isn\'t supported.');
-    }
-  }
+window.addEventListener('load', (event) => {
+
 // function showPerEnt() {
 //   var perfEntries = performance.getEntriesByType("navigation");
 //   for (var i=0; i < perfEntries.length; i++) {
@@ -29,10 +19,26 @@ function showPaintTimings() {
 //     console.log("redirectCount = " + p.redirectCount);
 //   }
 // }
-showPaintTimings() 
+
 // showPerEnt() 
-  
-}
+  //  function showPaintTimings2() {
+  //   const observer = new window.PerformanceObserver(list => {
+  //     list.getEntries().forEach(({
+  //       name,
+  //       startTime
+  //     }) => {
+  //       console.log('\n' + `${name}` + " : " + `${startTime}` + "ms.");
+
+  //       // console.log('[showPaintTimingsResult]', JSON.stringify(list.getEntriesByType('paint')))
+  //     });
+  //   });
+  //   observer.observe({
+  //     entryTypes: ['paint']
+  //   });
+  // }
+ 
+  //showPaintTimings2() 
+});
 
 function print_PerformanceEntries(value) {
   // Use getEntriesByType() to just get the "resource" events
@@ -44,6 +50,9 @@ function print_PerformanceEntries(value) {
 }
 
 function print_start_and_end_properties(perfEntry) {
+   //const imageType = perfEntry.find(element => element.name.includes('.jpg'))
+  // console.log(perfEntry);
+
   if (perfEntry.initiatorType == "img") {
   // Print timestamps of the PerformanceEntry *start and *end properties 
   properties = ["connectStart", "connectEnd",
