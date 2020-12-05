@@ -30,10 +30,16 @@ function Sleep(milliseconds) {
     const repeat = 10;
 
     for (let i = 0 ; i < repeat; i++) {
-         const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
-        //const browser = await puppeteer.launch();
+        //const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
+        const browser = await puppeteer.launch({headless:true, args: ['--enable-features=NetworkService']});
         const page = await browser.newPage();
         await page.goto('http://localhost:3000/');
+
+        let iternum = '\n' + "-----------"+`${i+1}`+"----------";
+        fs.writeFileSync('perfData.json', iternum, {flag:"a"});
+        let init = '\n' + "---------Initial Request--------" + '\n'
+        fs.writeFileSync('perfData.json', init, {flag:"a"}); 
+
         await consoleLog();
        
         async function testPage(page) {
@@ -62,7 +68,7 @@ function Sleep(milliseconds) {
         page.on('console', consoleObj => {
             const text = consoleObj.text();
             console.log('[Page] '+text + '\n');
-            fs.writeFileSync('perfData.txt', text, {flag:"a"});
+            fs.writeFileSync('perfData.json', text, {flag:"a"});
             if (text.startsWith('[showPaintTimingsResult]')) {
                 const splitted = text.split(' ');
                 const results = JSON.parse(splitted[2]);
@@ -77,10 +83,14 @@ function Sleep(milliseconds) {
         // fs.writeFileSync('FPData.txt', JSON.stringify(fp), {flag:"a"});
 
         await Sleep(10000);
-        await page.goto('http://localhost:3000/content1');
-        await Sleep(10000);
-        await browser.close();
 
+        let rel = '\n' + " ---------Reload--------" +'\n'
+        fs.writeFileSync('perfData.json', rel, {flag:"a"})
+        await page.goto('http://localhost:3000/content1');
+
+        await Sleep(10000);
+
+        await browser.close();
        
     }
    

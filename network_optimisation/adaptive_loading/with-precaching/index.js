@@ -1,14 +1,4 @@
-(async (document, navigator) => {
-  const $ = document.querySelector.bind(document)
-  // add image selection listener to select
-  $('#image-selector').onchange = () => {
-    const imgUrl = $('select').value
-    if (imgUrl) {
-      $('img').src = imgUrl
-      print_PerformanceEntries(imgUrl)
-    }
-  }
-
+(async (navigator) => {
   // register service worker
   try {
     const registration = await navigator.serviceWorker.register('./sw.js')
@@ -21,4 +11,4 @@
     console.log(`sw registration failed: ${error}`)
   }
   // navigator?.connection && console.log(navigator.connection)
-})(document, navigator)
+})(navigator)

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browser Cache</title>
+  <title>Service Worker Cache</title>
   <style>
     img {
       width: 50%;
@@ -23,15 +23,13 @@
     </div>
     <script>
       var row = document.getElementById("row")
-      // Loading of image files - from Disk Cache
+     // fetching images
       const image = num => {
         for (let i = 1; i < num + 1; i++) {
           const imgPath = "images_hq/1.jpg"
-          // avoid blob request ?
           fetch(imgPath)
             .then(response => response.blob())
             .then(function (response) {
-              // console.log('response', response);
               var objectURL = URL.createObjectURL(response);
               const img = document.createElement("img");
               img.src = objectURL;
@@ -42,19 +40,6 @@
       }
       image(10)
 
-      //Loading of image files - from Memory Cache
-      // imgUrls = [];
-      // const image = num => {
-      //   for (let i = 1; i < num + 1; i++) {
-      //     const img = document.createElement("img")
-      //     const imgPath = img.src = "images_hq/" + i + ".jpg"
-      //     const row = document.getElementById("row")
-      //     row.appendChild(img)
-      //     console.log('img path', imgPath)
-      //     imgUrls.push(imgPath);
-      //   }
-      // }
-      // image(10)
     </script>
   </div>
   <script src="index.js"></script>

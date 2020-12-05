@@ -1,27 +1,25 @@
-# Beschreibung
-Browser Cache Test. Bilder werden über img-Tag geladen.
-Die erste Anfrage dient dem Cache Warm-Up. Für weitere Requests müssen die Performance Parameter gemessen werden. 
+# Description
+Images are served as blob and appended into an <img> Element through fetch(). After the reload images are served from Disk Cache.
 
-# TODO
-- Version Controll überprüfen
-- Bildanzahl | Bildgröße als Testfaktor
-- Text Größe = 23,6 Kb
-- Image Größe = 489 Kb
+# Test procedure
+### Start the test
+- Start the server: `http-server .`
+- Run test file: `node runPerfTest.js`
+- Test results are written to text files
+---------------------------------------
+### Set-up
+- _1st Test: High Quality Images ( x = 10,30,50 )_ Cache TTL= 1y
+- _2nd Test: Low Quality Images ( x = 10,30,50 )_  Cache TTL = 1y
+-  Each test contains 2 cycles: Cache warm-up (First Time User) / Cached response (Returning User)
+-  Each test is repeated N times (N=50)
+---------------------------------------
+### Metrics
+- First Paint
+- First Contentful Paint
+- Resource Timing (Response End - Fetch Start)
 
-__Testablauf__
-- Cross Browser Test (Chrome, Firefox)
-- Cache Warm-Up (First Time User) + Returning User 
-- 4 Fälle - 10 Bilder/klein
-          - 50 Bilder/klein
-          - 10 Bilder/groß
-          - 50 Bilder/groß
-- LCP, FCP
-
-- Ressource Timing als HAR-file
-- Ressource Timing als Chart
-- Min Time, Max Time, Mittelwert
-
-# Ergebnisse
-
-- Browsr Cache (memory & disk Cache) ist eigentlich viel schneller als SW Cache.  
-- Bilder werden vom Memory Cache geladen und Texte vom Disk Cache geladen.
+### To do
+- Min/Max/Total timing
+- Justification for N,x
+- Another metrics ?
+# Results

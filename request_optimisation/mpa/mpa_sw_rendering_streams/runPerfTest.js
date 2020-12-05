@@ -27,11 +27,11 @@ function Sleep(milliseconds) {
 
 (async () => {
     const testStack = [];
-    const repeat = 1;
+    const repeat = 10;
 
     for (let i = 0 ; i < repeat; i++) {
          //const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
-        const browser = await puppeteer.launch({headless:false});
+        const browser = await puppeteer.launch({headless:true});
         const page = await browser.newPage();
         await page.goto('http://localhost:3000/');
 
@@ -39,47 +39,47 @@ function Sleep(milliseconds) {
         fs.writeFileSync('perfData.json', iternum, {flag:"a"});
         let init = '\n' + "---------Initial Request--------" + '\n'
         fs.writeFileSync('perfData.json', init, {flag:"a"}); 
-        
+
         await consoleLog();
        
         async function testPage(page) {
             const client = await page.target().createCDPSession();
             await client.send('Performance.enable');
-            let firstMeaningfulPaint = 0;
-            let performanceMetrics;
-            // There is no event where FirstMeaningfulPaint is ready, so we cannot precisely detect when this metric is done. 
-            // This is workaround for checking each small amount of time if this metric is ready:
-            while (firstMeaningfulPaint === 0) {
-            await page.waitFor(300);
-            performanceMetrics = await client.send('Performance.getMetrics');
-            firstMeaningfulPaint = getTimeFromPerformanceMetrics(
+        let firstMeaningfulPaint = 0;
+        let performanceMetrics;
+        // There is no event where FirstMeaningfulPaint is ready, so we cannot precisely detect when this metric is done. 
+        // This is workaround for checking each small amount of time if this metric is ready:
+        while (firstMeaningfulPaint === 0) {
+          await page.waitFor(300);
+          performanceMetrics = await client.send('Performance.getMetrics');
+          firstMeaningfulPaint = getTimeFromPerformanceMetrics(
             performanceMetrics,
             'FirstMeaningfulPaint'
           );
         }
       
         return extractDataFromPerformanceMetrics(
-            performanceMetrics,
-            'FirstMeaningfulPaint'
-          );
+          performanceMetrics,
+          'FirstMeaningfulPaint'
+        );
         }
         // redirect logs from page to console
-            function consoleLog() {
-            page.on('console', consoleObj => {
-              const text = consoleObj.text();
-              console.log('[Page] '+text + '\n');
-              fs.writeFileSync('perfData.json', text, {flag:"a"});
-              if (text.startsWith('[showPerEntResult]')) {
+        function consoleLog() {
+        page.on('console', consoleObj => {
+            const text = consoleObj.text();
+            console.log('[Page] '+text + '\n');
+             fs.writeFileSync('perfData.json', text, {flag:"a"});
+            if (text.startsWith('[showPaintTimingsResult]')) {
                 const splitted = text.split(' ');
                 const results = JSON.parse(splitted[2]);
-                //console.log('Results', splitted[1], results);
+                // console.log('Results', splitted[1], results);
                 testStack.push(results);
-              }          
-            });
-          }
-
-        //var fp = await testPage(page);
-        //console.log(fp + '\n');
+            }
+           
+        });
+    }  
+        // var fp = await testPage(page);
+        // console.log(fp + '\n');
         // fs.writeFileSync('FPData.txt', JSON.stringify(fp), {flag:"a"});
 
         await Sleep(10000);
@@ -87,11 +87,12 @@ function Sleep(milliseconds) {
         fs.writeFileSync('perfData.json', rel, {flag:"a"})
         await page.goto('http://localhost:3000/content1');
         await Sleep(10000);
-        
+
         await browser.close();
+
+       
     }
    
-    //console.log('\n\n Got restults:\n ', testStack);
-    
+   // console.log('\n\n Got restults:\n ', testStack);
 
 })();

@@ -4,30 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browser Cache</title>
+  <title>Browser Cache - Disk Cache</title>
   <style>
     img {
       width: 50%;
       height: auto;
       margin-bottom: 10px;
     }
-
     #row {
       display: inline-table;
     }
   </style>
 </head>
-
 <body>
   <div class="container-fluid">
     <div class="container">
       <h1>Browser Cache</h1>
       <div id="row">
-
       </div>
       <script>
         //Loading of image files - from Disk Cache
-
         const image = num => {
           for (let i = 1; i < num + 1; i++) {
             const imgPath = "images_hq/1.jpg"
@@ -47,5 +43,4 @@
   </div>
   <script src="perf.js"></script>
 </body>
-
 </html>

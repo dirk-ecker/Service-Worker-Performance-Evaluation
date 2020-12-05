@@ -9,3 +9,8 @@ export default {
   name: 'Home'
 }
 </script>
+<style scoped>
+img {
+  width: 50%;
+}
+</style>

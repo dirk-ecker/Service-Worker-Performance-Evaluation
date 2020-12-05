@@ -1,0 +1,266 @@
+
+-----------1----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 1005.8050ms.
+first-contentful-paint : 1005.8050ms.
+DOM content loaded = 0.7650000043213367
+DOM complete = 930.2150000003166
+DOM interactive = undefined
+document load = 4.4000000052619725
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":934.6499999955995,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":1.624999989871867,"domainLookupStart":792.0249999879161,"domainLookupEnd":792.4099999945611,"connectStart":792.4099999945611,"connectEnd":793.0749999941327,"secureConnectionStart":0,"requestStart":793.2199999922886,"responseStart":795.7599999936065,"responseEnd":796.9699999957811,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":926.9399999902816,"domContentLoadedEventStart":927.0199999882607,"domContentLoadedEventEnd":927.784999992582,"domComplete":930.2150000003166,"loadEventStart":930.2499999903375,"loadEventEnd":934.6499999955995,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+
+first-paint : 88.7350ms.
+first-contentful-paint : 88.7350ms.
+DOM content loaded = 0.9850000060396269
+DOM complete = 148.03500000562053
+DOM interactive = undefined
+document load = 1.9449999963399023
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":150.02000000094995,"initiatorType":"navigation","nextHopProtocol":"","workerStart":3.280000004451722,"redirectStart":0,"redirectEnd":0,"fetchStart":3.6300000065239146,"domainLookupStart":3.6300000065239146,"domainLookupEnd":3.6300000065239146,"connectStart":3.6300000065239146,"connectEnd":3.6300000065239146,"secureConnectionStart":0,"requestStart":3.6300000065239146,"responseStart":17.1050000062678,"responseEnd":21.34999999543652,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":21.64500000071712,"unloadEventEnd":21.64500000071712,"domInteractive":146.64500000071712,"domContentLoadedEventStart":146.7149999953108,"domContentLoadedEventEnd":147.70000000135042,"domComplete":148.03500000562053,"loadEventStart":148.07500000461005,"loadEventEnd":150.02000000094995,"type":"navigate","redirectCount":0}
+-----------1----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 982.5450ms.
+first-contentful-paint : 982.5450ms.
+DOM content loaded = 0.49500000022817403
+DOM complete = 939.1450000111945
+DOM interactive = undefined
+document load = 4.260000001522712
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":943.4350000083214,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":2.0700000022770837,"domainLookupStart":805.1350000023376,"domainLookupEnd":805.1400000113063,"connectStart":805.1400000113063,"connectEnd":805.8200000086799,"secureConnectionStart":0,"requestStart":806.0100000002421,"responseStart":808.6200000107056,"responseEnd":810.9700000059092,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":938.1600000051549,"domContentLoadedEventStart":938.2200000109151,"domContentLoadedEventEnd":938.7150000111433,"domComplete":939.1450000111945,"loadEventStart":939.1750000067987,"loadEventEnd":943.4350000083214,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+first-paint : 56.4200 ms.first-contentful-paint : 56.4200 ms.
+DOM content loaded = 0.1900000061141327
+DOM complete = 303.7049999984447
+DOM interactive = undefined
+document load = 0.8099999977275729
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":304.5449999917764,"initiatorType":"navigation","nextHopProtocol":"","workerStart":2.869999996619299,"redirectStart":0,"redirectEnd":0,"fetchStart":3.269999986514449,"domainLookupStart":3.269999986514449,"domainLookupEnd":3.269999986514449,"connectStart":3.269999986514449,"connectEnd":3.269999986514449,"secureConnectionStart":0,"requestStart":3.269999986514449,"responseStart":13.189999997848645,"responseEnd":15.239999993355013,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":15.579999992041849,"unloadEventEnd":15.579999992041849,"domInteractive":92.66499998921063,"domContentLoadedEventStart":92.72999998938758,"domContentLoadedEventEnd":92.91999999550171,"domComplete":303.7049999984447,"loadEventStart":303.73499999404885,"loadEventEnd":304.5449999917764,"type":"navigate","redirectCount":0}
+-----------2----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 933.8000ms.
+first-contentful-paint : 933.8000ms.
+DOM content loaded = 0.9949999948730692
+DOM complete = 896.1700000072597
+DOM interactive = undefined
+document load = 1.9299999985378236
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":898.1349999958184,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":2.925000007962808,"domainLookupStart":791.3450000050943,"domainLookupEnd":791.3550000084797,"connectStart":791.3550000084797,"connectEnd":792.1300000016345,"secureConnectionStart":0,"requestStart":792.2950000065612,"responseStart":793.3750000083819,"responseEnd":795.8199999993667,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":891.7349999974249,"domContentLoadedEventStart":891.8850000045495,"domContentLoadedEventEnd":892.8799999994226,"domComplete":896.1700000072597,"loadEventStart":896.2049999972805,"loadEventEnd":898.1349999958184,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+first-paint : 56.6500 ms.first-contentful-paint : 56.6500 ms.
+DOM content loaded = 0.26000000070780516
+DOM complete = 322.5150000071153
+DOM interactive = undefined
+document load = 1.1049999884562567
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":323.644999996759,"initiatorType":"navigation","nextHopProtocol":"","workerStart":2.9599999979836866,"redirectStart":0,"redirectEnd":0,"fetchStart":3.3350000012433156,"domainLookupStart":3.3350000012433156,"domainLookupEnd":3.3350000012433156,"connectStart":3.3350000012433156,"connectEnd":3.3350000012433156,"secureConnectionStart":0,"requestStart":3.3350000012433156,"responseStart":13.619999997899868,"responseEnd":15.849999996135011,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":16.029999998863786,"unloadEventEnd":16.029999998863786,"domInteractive":100.3400000045076,"domContentLoadedEventStart":100.4700000048615,"domContentLoadedEventEnd":100.73000000556931,"domComplete":322.5150000071153,"loadEventStart":322.54000000830274,"loadEventEnd":323.644999996759,"type":"navigate","redirectCount":0}
+-----------3----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 929.6300ms.
+first-contentful-paint : 929.6300ms.
+DOM content loaded = 0.5600000004051253
+DOM complete = 889.6300000051269
+DOM interactive = undefined
+document load = 2.614999990328215
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":892.2699999966426,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":2.215000000433065,"domainLookupStart":777.1749999956228,"domainLookupEnd":777.1800000045914,"connectStart":777.1800000045914,"connectEnd":777.7199999982258,"secureConnectionStart":0,"requestStart":777.8800000087358,"responseStart":779.3650000094203,"responseEnd":781.7599999980303,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":888.7099999992643,"domContentLoadedEventStart":888.7800000084098,"domContentLoadedEventEnd":889.340000008815,"domComplete":889.6300000051269,"loadEventStart":889.6550000063144,"loadEventEnd":892.2699999966426,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+first-paint : 75.3650 ms.first-contentful-paint : 75.3650 ms.
+DOM content loaded = 0.28500000189524144
+DOM complete = 306.1500000039814
+DOM interactive = undefined
+document load = 1.0449999972479418
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":307.21499999344815,"initiatorType":"navigation","nextHopProtocol":"","workerStart":3.1100000051083043,"redirectStart":0,"redirectEnd":0,"fetchStart":3.5499999939929694,"domainLookupStart":3.5499999939929694,"domainLookupEnd":3.5499999939929694,"connectStart":3.5499999939929694,"connectEnd":3.5499999939929694,"secureConnectionStart":0,"requestStart":3.5499999939929694,"responseStart":13.760000001639128,"responseEnd":16.055000000051223,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":16.260000003967434,"unloadEventEnd":16.260000003967434,"domInteractive":103.01999999501277,"domContentLoadedEventStart":103.11999999976251,"domContentLoadedEventEnd":103.40500000165775,"domComplete":306.1500000039814,"loadEventStart":306.1699999962002,"loadEventEnd":307.21499999344815,"type":"navigate","redirectCount":0}
+-----------4----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 935.2000ms.
+first-contentful-paint : 935.2000ms.
+DOM content loaded = 2.250000005005859
+DOM complete = 871.6450000065379
+DOM interactive = undefined
+document load = 2.1850000048289075
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":873.8799999991897,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":1.4950000040698797,"domainLookupStart":770.539999997709,"domainLookupEnd":770.554999995511,"connectStart":770.554999995511,"connectEnd":771.4899999991758,"secureConnectionStart":0,"requestStart":771.6349999973318,"responseStart":773.2150000083493,"responseEnd":774.6550000010757,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":868.7449999997625,"domContentLoadedEventStart":868.849999998929,"domContentLoadedEventEnd":871.1000000039348,"domComplete":871.6450000065379,"loadEventStart":871.6949999943608,"loadEventEnd":873.8799999991897,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+
+first-paint : 114.9550ms.
+first-contentful-paint : 114.9550ms.
+DOM content loaded = 0.35999999090563506
+DOM complete = 160.88499999023043
+DOM interactive = undefined
+document load = 0.9799999970709905
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":161.88499999407213,"initiatorType":"navigation","nextHopProtocol":"","workerStart":3.064999997150153,"redirectStart":0,"redirectEnd":0,"fetchStart":3.379999994649552,"domainLookupStart":3.379999994649552,"domainLookupEnd":3.379999994649552,"connectStart":3.379999994649552,"connectEnd":3.379999994649552,"secureConnectionStart":0,"requestStart":3.379999994649552,"responseStart":13.29000000259839,"responseEnd":15.86499999393709,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":15.854999990551732,"unloadEventEnd":15.854999990551732,"domInteractive":160.23999999742955,"domContentLoadedEventStart":160.31500000099186,"domContentLoadedEventEnd":160.6749999918975,"domComplete":160.88499999023043,"loadEventStart":160.90499999700114,"loadEventEnd":161.88499999407213,"type":"navigate","redirectCount":0}
+-----------5----------
+---------Initial Request--------
+
+first-paint : 2901.4800ms.
+first-contentful-paint : 2901.4800ms.Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+DOM content loaded = 0.46999999904073775
+DOM complete = 2902.80999999959
+DOM interactive = undefined
+document load = 2.9750000103376806
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":2905.8599999989383,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":2.119999990100041,"domainLookupStart":2711.5599999960978,"domainLookupEnd":2711.5749999939,"connectStart":2711.5749999939,"connectEnd":2712.714999986929,"secureConnectionStart":0,"requestStart":2712.8199999860954,"responseStart":2714.0399999916553,"responseEnd":2715.2749999950174,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":2900.97999999125,"domContentLoadedEventStart":2901.1049999971874,"domContentLoadedEventEnd":2901.574999996228,"domComplete":2902.80999999959,"loadEventStart":2902.8849999886006,"loadEventEnd":2905.8599999989383,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+first-paint : 82.9800 ms.first-contentful-paint : 82.9800 ms.
+DOM content loaded = 0.8400000078836456
+DOM complete = 155.0650000135647
+DOM interactive = undefined
+document load = 2.7399999962653965
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":157.839999999851,"initiatorType":"navigation","nextHopProtocol":"","workerStart":3.305000005639158,"redirectStart":0,"redirectEnd":0,"fetchStart":3.81000000925269,"domainLookupStart":3.81000000925269,"domainLookupEnd":3.81000000925269,"connectStart":3.81000000925269,"connectEnd":3.81000000925269,"secureConnectionStart":0,"requestStart":3.81000000925269,"responseStart":14.660000000731088,"responseEnd":18.22000001266133,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":18.630000005941838,"unloadEventEnd":18.630000005941838,"domInteractive":153.8050000090152,"domContentLoadedEventStart":153.9000000047963,"domContentLoadedEventEnd":154.74000001267996,"domComplete":155.0650000135647,"loadEventStart":155.1000000035856,"loadEventEnd":157.839999999851,"type":"navigate","redirectCount":0}
+-----------6----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 2824.2300ms.
+first-contentful-paint : 2824.2300ms.
+DOM content loaded = 0.9750000026542693
+DOM complete = 2786.529999997583
+DOM interactive = undefined
+document load = 1.9549999997252598
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":2788.570000004256,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":1.3949999993201345,"domainLookupStart":2680.449999999837,"domainLookupEnd":2680.4600000032224,"connectStart":2680.4600000032224,"connectEnd":2681.639999995241,"secureConnectionStart":0,"requestStart":2681.765000001178,"responseStart":2683.164999994915,"responseEnd":2684.8549999995157,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":2784.1849999967963,"domContentLoadedEventStart":2784.299999999348,"domContentLoadedEventEnd":2785.2750000020023,"domComplete":2786.529999997583,"loadEventStart":2786.615000004531,"loadEventEnd":2788.570000004256,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+
+first-paint : 69.1700ms.
+first-contentful-paint : 69.1700ms.
+DOM content loaded = 0.5450000026030466
+DOM complete = 132.42999999783933
+DOM interactive = undefined
+document load = 1.799999998183921
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":134.27999999839813,"initiatorType":"navigation","nextHopProtocol":"","workerStart":3.1750000052852556,"redirectStart":0,"redirectEnd":0,"fetchStart":3.6099999997531995,"domainLookupStart":3.6099999997531995,"domainLookupEnd":3.6099999997531995,"connectStart":3.6099999997531995,"connectEnd":3.6099999997531995,"secureConnectionStart":0,"requestStart":3.6099999997531995,"responseStart":13.699999995878898,"responseEnd":15.830000003916211,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":16.010000006644987,"unloadEventEnd":16.010000006644987,"domInteractive":130.38000000233296,"domContentLoadedEventStart":130.5350000038743,"domContentLoadedEventEnd":131.08000000647735,"domComplete":132.42999999783933,"loadEventStart":132.4800000002142,"loadEventEnd":134.27999999839813,"type":"navigate","redirectCount":0}
+-----------7----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)
+first-paint : 951.3650ms.
+first-contentful-paint : 951.3650ms.SW scope: http://localhost:3000/
+DOM content loaded = 1.165000008768402
+DOM complete = 929.1149999917252
+DOM interactive = undefined
+document load = 4.560000001220033
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":933.7049999885494,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":3.1399999861605465,"domainLookupStart":813.849999991362,"domainLookupEnd":813.8599999947473,"connectStart":813.8599999947473,"connectEnd":814.4199999951525,"secureConnectionStart":0,"requestStart":814.5999999978812,"responseStart":816.3599999970756,"responseEnd":817.5049999990733,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":926.3799999898765,"domContentLoadedEventStart":926.484999989043,"domContentLoadedEventEnd":927.6499999978114,"domComplete":929.1149999917252,"loadEventStart":929.1449999873294,"loadEventEnd":933.7049999885494,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+
+first-paint : 63.8050ms.
+first-contentful-paint : 63.8050ms.
+DOM content loaded = 0.3799999976763502
+DOM complete = 96.4349999994738
+DOM interactive = undefined
+document load = 1.8049999926006421
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":98.27999999106396,"initiatorType":"navigation","nextHopProtocol":"","workerStart":3.3899999980349094,"redirectStart":0,"redirectEnd":0,"fetchStart":3.8050000002840534,"domainLookupStart":3.8050000002840534,"domainLookupEnd":3.8050000002840534,"connectStart":3.8050000002840534,"connectEnd":3.8050000002840534,"secureConnectionStart":0,"requestStart":3.8050000002840534,"responseStart":13.554999997722916,"responseEnd":16.629999998258427,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":16.875000001164153,"unloadEventEnd":16.875000001164153,"domInteractive":95.58500000275671,"domContentLoadedEventStart":95.70499999972526,"domContentLoadedEventEnd":96.08499999740161,"domComplete":96.4349999994738,"loadEventStart":96.47499999846332,"loadEventEnd":98.27999999106396,"type":"navigate","redirectCount":0}
+-----------8----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 967.5500ms.
+first-contentful-paint : 967.5500ms.
+DOM content loaded = 0.9150000114459544
+DOM complete = 937.6500000071246
+DOM interactive = undefined
+document load = 1.5300000086426735
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":939.2100000113714,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":1.6949999990174547,"domainLookupStart":827.9250000050524,"domainLookupEnd":827.9350000084378,"connectStart":827.9350000084378,"connectEnd":828.6050000024261,"secureConnectionStart":0,"requestStart":828.73500000278,"responseStart":830.3500000038184,"responseEnd":832.605000003241,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":935.6700000062119,"domContentLoadedEventStart":935.7549999986077,"domContentLoadedEventEnd":936.6700000100536,"domComplete":937.6500000071246,"loadEventStart":937.6800000027288,"loadEventEnd":939.2100000113714,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+first-paint : 66.6400 ms.first-contentful-paint : 66.6400 ms.
+DOM content loaded = 0.1849999971454963
+DOM complete = 318.8300000037998
+DOM interactive = undefined
+document load = 1.280000011320226
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":320.1450000051409,"initiatorType":"navigation","nextHopProtocol":"","workerStart":1.9800000009126961,"redirectStart":0,"redirectEnd":0,"fetchStart":2.3099999962141737,"domainLookupStart":2.3099999962141737,"domainLookupEnd":2.3099999962141737,"connectStart":2.3099999962141737,"connectEnd":2.3099999962141737,"secureConnectionStart":0,"requestStart":2.3099999962141737,"responseStart":10.509999992791563,"responseEnd":12.784999998984858,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":13.00999999511987,"unloadEventEnd":13.00999999511987,"domInteractive":95.44000000460073,"domContentLoadedEventStart":95.56000000156928,"domContentLoadedEventEnd":95.74499999871477,"domComplete":318.8300000037998,"loadEventStart":318.8649999938207,"loadEventEnd":320.1450000051409,"type":"navigate","redirectCount":0}
+-----------9----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 1016.8150ms.
+first-contentful-paint : 1016.8150ms.
+DOM content loaded = 1.1149999918416142
+DOM complete = 933.1499999971129
+DOM interactive = undefined
+document load = 2.7399999962653965
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":935.9249999979511,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":1.700000007986091,"domainLookupStart":817.349999997532,"domainLookupEnd":817.3749999987194,"connectStart":817.3749999987194,"connectEnd":818.0350000038743,"secureConnectionStart":0,"requestStart":818.1750000076136,"responseStart":819.5350000023609,"responseEnd":821.0550000076182,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":931.3200000033248,"domContentLoadedEventStart":931.5150000038557,"domContentLoadedEventEnd":932.6299999956973,"domComplete":933.1499999971129,"loadEventStart":933.1850000016857,"loadEventEnd":935.9249999979511,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+
+first-paint : 69.4750ms.
+first-contentful-paint : 69.4750ms.
+DOM content loaded = 0.23999999393709004
+DOM complete = 100.16500001074746
+DOM interactive = undefined
+document load = 0.8950000046752393
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":101.09500000544358,"initiatorType":"navigation","nextHopProtocol":"","workerStart":2.745000005234033,"redirectStart":0,"redirectEnd":0,"fetchStart":3.180000014253892,"domainLookupStart":3.180000014253892,"domainLookupEnd":3.180000014253892,"connectStart":3.180000014253892,"connectEnd":3.180000014253892,"secureConnectionStart":0,"requestStart":3.180000014253892,"responseStart":12.13500001176726,"responseEnd":14.40500000899192,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":14.440000013564713,"unloadEventEnd":14.440000013564713,"domInteractive":99.49500000220723,"domContentLoadedEventStart":99.56500001135282,"domContentLoadedEventEnd":99.80500000528991,"domComplete":100.16500001074746,"loadEventStart":100.20000000076834,"loadEventEnd":101.09500000544358,"type":"navigate","redirectCount":0}
+-----------10----------
+---------Initial Request--------
+Failed to load resource: the server responded with a status of 404 (Not Found)SW scope: http://localhost:3000/
+first-paint : 2888.8850ms.
+first-contentful-paint : 2888.8850ms.
+DOM content loaded = 0.44499999785330147
+DOM complete = 2822.5600000005215
+DOM interactive = undefined
+document load = 1.740000006975606
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/","entryType":"navigation","startTime":0,"duration":2824.319999999716,"initiatorType":"navigation","nextHopProtocol":"http/1.1","workerStart":0,"redirectStart":0,"redirectEnd":0,"fetchStart":3.620000003138557,"domainLookupStart":2713.180000006105,"domainLookupEnd":2713.195000003907,"connectStart":2713.195000003907,"connectEnd":2713.9449999958742,"secureConnectionStart":0,"requestStart":2714.110000000801,"responseStart":2716.279999993276,"responseEnd":2718.5199999948964,"transferSize":1956,"encodedBodySize":1725,"decodedBodySize":1725,"serverTiming":[],"workerTiming":[],"unloadEventStart":0,"unloadEventEnd":0,"domInteractive":2821.7949999962,"domContentLoadedEventStart":2821.859999996377,"domContentLoadedEventEnd":2822.3049999942305,"domComplete":2822.5600000005215,"loadEventStart":2822.5799999927403,"loadEventEnd":2824.319999999716,"type":"navigate","redirectCount":0}
+ ---------Reload--------
+
+first-paint : 69.3300ms.
+first-contentful-paint : 69.3300ms.
+DOM content loaded = 3.935000000637956
+DOM complete = 88.53999999701045
+DOM interactive = undefined
+document load = 1.0900000052060932
+document unload = 0
+type = navigate
+redirectCount = 0
+[showPerEntResult] 0 {"name":"http://localhost:3000/content1","entryType":"navigation","startTime":0,"duration":89.65500000340398,"initiatorType":"navigation","nextHopProtocol":"","workerStart":2.8000000020256266,"redirectStart":0,"redirectEnd":0,"fetchStart":3.2099999953061342,"domainLookupStart":3.2099999953061342,"domainLookupEnd":3.2099999953061342,"connectStart":3.2099999953061342,"connectEnd":3.2099999953061342,"secureConnectionStart":0,"requestStart":3.2099999953061342,"responseStart":14.530000000377186,"responseEnd":16.835000002174638,"transferSize":0,"encodedBodySize":0,"decodedBodySize":0,"serverTiming":[],"workerTiming":[],"unloadEventStart":17.244999995455146,"unloadEventEnd":17.244999995455146,"domInteractive":84.19999999750871,"domContentLoadedEventStart":84.27999999548774,"domContentLoadedEventEnd":88.2149999961257,"domComplete":88.53999999701045,"loadEventStart":88.56499999819789,"loadEventEnd":89.65500000340398,"type":"navigate","redirectCount":0}

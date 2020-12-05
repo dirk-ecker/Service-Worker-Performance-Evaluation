@@ -4,18 +4,17 @@ window.onload = function () {
       let performance = window.performance;
       let performanceEntries = performance.getEntriesByType('paint');
       performanceEntries.forEach((performanceEntry) => {
-        console.log(performanceEntry.name + " : " + performanceEntry.startTime.toFixed(4) + " ms.");
+        console.log(performanceEntry.name + " : " + performanceEntry.startTime.toFixed(4) + " ms." + '\n');
       });
     } else {
       console.log('Performance timing isn\'t supported.');
     }
-
     const observer = new window.PerformanceObserver(list => {
       list.getEntries().forEach(({
         name,
         startTime
       }) => {
-        console.log('\n' + `${name}` + " : " + `${startTime.toFixed(4)}` + "ms.");
+        console.log('\n' + `${name}` + " : " + `${startTime.toFixed(4)}` + "ms." +'\n');
         // console.log('[showPaintTimingsResult]', JSON.stringify(list.getEntriesByType('paint')))
       });
     });
@@ -23,6 +22,8 @@ window.onload = function () {
       entryTypes: ['paint']
     });
   }
+
+
 
   function showPerEnt() {
     var perfEntries = performance.getEntriesByType("navigation");

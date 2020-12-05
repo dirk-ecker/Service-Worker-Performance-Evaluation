@@ -1,28 +1,25 @@
-# Beschreibung
-SW Cache Test. Der index.js Script generiert img-Tags mit src Parameter. Parallel erzeugt der SW die Cache-Storage und liefert die Bidler direkt vom Cache. 
-Die erste Anfrage dient dem Cache Warm-Up. Für weitere Requests müssen die Performance Parameter gemessen werden. 
+# Description
+Images are served as blob and appended into an <img> Element through fetch(), simuntaniously the image gets precached by Service Worker. After the reload images are delivered from Service Worker cache.
 
+# Test procedure
+### Start the test
+- Start the server: `http-server .`
+- Run test file: `node runPerfTest.js`
+- Test results are written to text files
+---------------------------------------
+### Set-up
+- _1st Test: High Quality Images ( x = 10,30,50 )_ Cache TTL= 1y
+- _2nd Test: Low Quality Images ( x = 10,30,50 )_  Cache TTL = 1y
+-  Each test contains 2 cycles: Cache warm-up (First Time User) / Cached response (Returning User)
+-  Each test is repeated N times (N=50)
+---------------------------------------
+### Metrics
+- First Paint
+- First Contentful Paint
+- Resource Timing (Response End - Fetch Start)
 
-
-# TODO
-
-- Performance Metriken: Time To First Byte, First Meaningful Paint, Dom Content Loaded, Server Response Time.
-
-- Warum ist es so langsam ? Kommunikation zwischen main thread und SW überpfüfen
-
-__Testablauf__
-- Cross Browser Test (Chrome, Firefox)
-- Cache Warm-Up (First Time User) + Returning User 
-- 4 Fälle - 10 Bilder/klein
-          - 50 Bilder/klein
-          - 10 Bilder/groß
-          - 50 Bilder/groß
-- LCP, FCP
-
-- Ressource Timing als HAR-file
-- Ressource Timing als Chart
-- Min Time, Max Time, Mittelwert
-- Min Time, Max Time, Mittelwert
- 
-# Ergebnisse
-SW lädt Ressourcen langsamer als Browser Cache.
+### To do
+- Min time, max time, total timing
+- Justification for N,x
+- Another metrics ?
+# Results

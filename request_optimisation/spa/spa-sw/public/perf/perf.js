@@ -1,6 +1,23 @@
 window.onload = function() {
+ 
     function showPaintTimings() {
-        if (window.performance) {
+        const observer = new window.PerformanceObserver(list => {
+          list.getEntries().forEach(({
+            name,
+            startTime
+          }) => {
+            console.log('\n' + `${name}` + " : " + `${startTime}` + "ms.");
+    
+            // console.log('[showPaintTimingsResult]', JSON.stringify(list.getEntriesByType('paint')))
+          });
+        });
+        observer.observe({
+          entryTypes: ['paint']
+        });
+      }
+
+      function showPaintTimings1() {
+         if (window.performance) {
           var total = [];
           let performance = window.performance;
           let performanceEntries = performance.getEntriesByType('paint');
@@ -48,7 +65,7 @@ window.onload = function() {
     }
       }
     }
-    
+    showPaintTimings1()
     showPaintTimings() 
     showPerEnt() 
       

@@ -4,13 +4,21 @@ const OFFLINE_VERSION = 1
 
 const toCache = require('static-to-cache')();
 
-addEventListener('install', event => {
+self.addEventListener('install', event => {
+  console.log('sw installing', event)
   skipWaiting();
   event.waitUntil(async function () {
     const cache = await caches.open('views');
     await cache.addAll(toCache);
   }());
 });
+
+self.addEventListener('activate', (event) => {
+  console.log('sw start activate', event)
+  // Tell the active service worker to take control of the page immediately.
+  self.clients.claim()
+  console.log('sw end activate')
+})
 
 //Starting stream
 
@@ -55,7 +63,6 @@ function streamedContent(event, url) {
      caches.match('./views/partials/footer.html')
     ];
 
-
    const identity = new IdentityStream();
 
    event.waitUntil(async function() {
@@ -74,7 +81,7 @@ function streamedContent(event, url) {
 
 }
 
-addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url); // inspect request urls
 

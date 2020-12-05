@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,21 @@
       <option value="">Select and image</option>
       <option value="images/example.jpg">Example Image</option>
     </select>
-    <p><img src="" alt=""/></p>
+    <p><img src="" alt="" /></p>
   </div>
+  <script>
+    const $ = document.querySelector.bind(document)
+    // add image selection listener to select
+    $('#image-selector').onchange = () => {
+      const imgUrl = $('select').value
+      if (imgUrl) {
+        $('img').src = imgUrl
+        print_PerformanceEntries(imgUrl)
+      }
+    }
+  </script>
   <script src="perf.js"></script>
-  <script src ="index.js"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>

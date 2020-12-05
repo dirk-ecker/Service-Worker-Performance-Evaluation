@@ -1,4 +1,4 @@
-(async (document, navigator) => {
+(async ( navigator) => {
   // register service worker
   try {
     const registration = await navigator.serviceWorker.register('./sw.js')
@@ -7,4 +7,4 @@
     console.log(`sw registration failed: ${error}`)
   };
   
-})(document, navigator)
+})( navigator)

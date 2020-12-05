@@ -6,6 +6,7 @@ const toCache = require('static-to-cache')();
 
 
 addEventListener('install', event => {
+  console.log('sw installing', event)
     // Force the waiting service worker to become the active service worker.
   skipWaiting();
   event.waitUntil(async function () {

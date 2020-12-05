@@ -1,7 +1,7 @@
-"use strict"
 
-import puppeteer from 'puppeteer'
-import fs from 'fs'
+
+const puppeteer = require('puppeteer');
+const fs = require('fs');
 
 const getTimeFromPerformanceMetrics = (metrics, name) =>
   metrics.metrics.find(x => x.name === name).value * 1000;
@@ -27,13 +27,14 @@ function Sleep(milliseconds) {
 
 (async () => {
     const testStack = [];
-    const repeat = 10;
+    const repeat = 1;
 
     for (let i = 0 ; i < repeat; i++) {
-         const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
-        //const browser = await puppeteer.launch();
+         //const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:false});
+        const browser = await puppeteer.launch({headless:true});
+        //const context = await browser.createIncognitoBrowserContext();
         const page = await browser.newPage();
-        await page.goto('http://localhost:3000/');
+        await page.goto('http://localhost:8080/');
         await consoleLog();
        
         async function testPage(page) {
@@ -62,7 +63,7 @@ function Sleep(milliseconds) {
         page.on('console', consoleObj => {
             const text = consoleObj.text();
             console.log('[Page] '+text + '\n');
-             fs.writeFileSync('perfData.txt', text, {flag:"a"});
+           //  fs.writeFileSync('perfData.txt', text, {flag:"a"});
             if (text.startsWith('[showPaintTimingsResult]')) {
                 const splitted = text.split(' ');
                 const results = JSON.parse(splitted[2]);
@@ -75,10 +76,17 @@ function Sleep(milliseconds) {
         // var fp = await testPage(page);
         // console.log(fp + '\n');
         // fs.writeFileSync('FPData.txt', JSON.stringify(fp), {flag:"a"});
+        await Sleep(10000);
+        await console.log("------Initial Request-------");
+        await page.reload({ waitUntil: ["domcontentloaded"] });
+        // await Promise.all([
+        //   // Manual clicking of the link
+        //       page.$eval('a[href="/content1"]', el => el.click()),
+        //        page.waitForNavigation()
+        //     ]).catch(e => console.log(e));
 
         await Sleep(10000);
-        await page.goto('http://localhost:3000/content1');
-        await Sleep(10000);
+        await console.log("------Reload-------");
         await browser.close();
 
        

@@ -12,7 +12,7 @@ const precache = [
 
 self.addEventListener('install', event => {
   const connectionType = navigator.connection.effectiveType
-  if (connectionType == '4g' || connectionType == '5g') {
+  if (connectionType == '4g') {
     console.log('good connection, we do not precache')
   } else {
     event.waitUntil(async function () {
