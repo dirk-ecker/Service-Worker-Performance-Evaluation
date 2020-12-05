@@ -3,7 +3,7 @@ const NUMBER_OF_SERVERS = 3
 
 let actualServerNumber = 0
 
-const actualServerUrl = () => `${SERVER_HOST}:${5000+actualServerNumber}`
+const actualServerUrl = serverNumber => `${SERVER_HOST}:${5000 + serverNumber}`
 
 // A request is a resource request if it is a `GET` for something inside `imgs`.
 const isResourceRequest = request => {
@@ -11,22 +11,29 @@ const isResourceRequest = request => {
 }
 
 const handleImageRequest = async request => {
-  try {
-    const url = new URL(request.url)
-    const fetchController = new AbortController()
-    // we are waiting 100 msec otherwise abort the fetch
-    const timeoutHandle = setTimeout(() => {
-      fetchController.abort()
-    }, 10000)
-    // we got it below 100 msec
-    const response = await fetch(`${actualServerUrl()}${url.pathname}`, { signal: fetchController.signal })
-    clearTimeout(timeoutHandle)
-    return response
-  } catch (exception) {
-    if (exception instanceof DOMException) {
-      console.log('aborted', exception)
-    } else {
-      console.log(exception)
+  let tries = 0
+  while (tries < 10) {
+    try {
+      console.log('get image from server', actualServerNumber)
+      const url = new URL(request.url)
+      const fetchController = new AbortController()
+      // we are waiting 100 msec otherwise abort the fetch
+      const timeoutHandle = setTimeout(() => {
+        fetchController.abort()
+      }, 100)
+      // we got it below 100 msec
+      const serverNumber = actualServerNumber
+      actualServerNumber = (actualServerNumber + 1) % NUMBER_OF_SERVERS
+      const response = await fetch(`${actualServerUrl(serverNumber)}${url.pathname}`, {signal: fetchController.signal})
+      clearTimeout(timeoutHandle)
+      return response
+    } catch (exception) {
+      if (exception instanceof DOMException) {
+        console.log('aborted', exception)
+      } else {
+        console.log(`try ${tries}`, exception)
+        tries++
+      }
     }
   }
 }
