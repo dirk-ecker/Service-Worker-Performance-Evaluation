@@ -1,4 +1,35 @@
 const SERVER_HOST = 'http://localhost'
+const NUMBER_OF_SERVERS = 3
+
+let actualServerNumber = 0
+
+const actualServerUrl = () => `${SERVER_HOST}:${5000+actualServerNumber}`
+
+// A request is a resource request if it is a `GET` for something inside `imgs`.
+const isResourceRequest = request => {
+  return request.url.match(/\/images\/.*$/) && request.method === 'GET'
+}
+
+const handleImageRequest = async request => {
+  try {
+    const url = new URL(request.url)
+    const fetchController = new AbortController()
+    // we are waiting 100 msec otherwise abort the fetch
+    const timeoutHandle = setTimeout(() => {
+      fetchController.abort()
+    }, 10000)
+    // we got it below 100 msec
+    const response = await fetch(`${actualServerUrl()}${url.pathname}`, { signal: fetchController.signal })
+    clearTimeout(timeoutHandle)
+    return response
+  } catch (exception) {
+    if (exception instanceof DOMException) {
+      console.log('aborted', exception)
+    } else {
+      console.log(exception)
+    }
+  }
+}
 
 // The code in `oninstall` and `onactivate` force the service worker to
 // control the clients ASAP.
@@ -13,59 +44,15 @@ self.onactivate = function(event) {
 }
 
 
-self.onfetch = function(event) {
-    const request = event.request
-    console.log('onfetch', request.url)
-    if (isResource(request)) { // check if image request
-      const fetchWithRedirection = async () => {
-      try {
-      console.log('resource request')
-      const response = await fetch('http://localhost:5000/' + request.url) // change images to images_0
-      if (response) {
-        return response
-      }
-        // If we don't have a valid response, trigger
-        throw new Error('Unable to get a response.')
-    }
-    catch (error) {
-
-     // const redirectionURL = await ... // reirect url to another port
-
-      if (redirectionURL) {
-        // HTTP 302 indicates a temporary redirect.
-        return Response.redirect(redirectionURL, 302)
-      }
-
-      // If we get to this point, redirection isn't possible,
-      // so just trigger a NetworkError.
-      throw error
-     }
-    }
-   } else {
-      console.log('other request')
-      event.respondWith(fetch(request))
-    }
+self.onfetch = event => {
+  const request = event.request
+  console.log('onfetch', request.url)
+  if (isResourceRequest(request)) {
+    console.log('image request')
+    event.respondWith(handleImageRequest(request))
+  } else {
+    console.log('other request')
+    event.respondWith(fetch(request))
   }
+}
 
-
-  // A request is a resource request if it is a `GET` for something inside `imgs`.
-function isResource(request) {
-    return request.url.match(/\/images\/.*$/) && request.method === 'GET'
-  }
-
-
-
-  // Query the back-end for servers loads.
-function getServerLoads(session) {
-    return fetch('http://localhost:5000/server-loads?session=' + session).then(function(response) {
-      return response.json()
-    })
-  }
-
-
-  function selectServer(serverLoads) {
-  // const serverIndex = ... // based on value if server is available
-
-    // Servers are 1, 2, 3...
-    return `${SERVER_HOST}:${5000+serverIndex}`
-  }

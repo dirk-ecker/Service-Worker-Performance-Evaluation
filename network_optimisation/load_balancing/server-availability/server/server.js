@@ -1,20 +1,16 @@
 const fs = require('fs')
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require('express')
+const bodyParser = require('body-parser')
 
-var net = require('net');
-var Promise = require('bluebird');
+const net = require('net')
+const Promise = require('bluebird')
 
-const app = express();
-
-// Simple session handling with a hash of sessions.
-// const sessions = {};
+const app = express()
 
 // Allow express to parse the body of the requests.
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
 // Simple session handling with a hash of sessions.
-const sessions = {};
 const SERVER_HOST = 'localhost'
 const serverNumber = process.argv[2] || 0
 const serverPort = 5000 + parseInt(serverNumber)
@@ -24,42 +20,41 @@ app.listen(serverPort, function () {
 })
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
   // intercept OPTIONS method
-  if ('OPTIONS' == req.method) {
-    res.sendStatus(200);
+  if ('OPTIONS' === req.method) {
+    res.sendStatus(200)
   } else {
-    next();
+    next()
   }
 })
 
-
-
 // check if server is running and accepting connections
-function checkConnection(host, port, timeout) {
+const checkConnection = (host, port, timeout) => {
   return new Promise(function (resolve, reject) {
-    timeout = timeout || 10000; // default of 10 seconds
-    var timer = setTimeout(function () {
-      reject("timeout");
-      socket.end();
-    }, timeout);
-    var socket = net.createConnection(port, host, function () {
-      clearTimeout(timer);
-      resolve();
-      socket.end();
-    });
+    timeout = timeout || 10000 // default of 10 seconds
+    const timer = setTimeout(function () {
+      reject('timeout')
+      socket.end()
+    }, timeout)
+    const socket = net.createConnection(port, host, function () {
+      clearTimeout(timer)
+      resolve()
+      socket.end()
+    })
     socket.on('error', function (err) {
-      clearTimeout(timer);
-      reject(err);
-    });
-  });
+      clearTimeout(timer)
+      reject(err)
+    })
+  })
 }
-checkConnection(SERVER_HOST, serverPort).then(function () {
-  console.log(SERVER_HOST + "on port" + serverPort + ":success");
-}, function (err) {
-  console.log(SERVER_HOST + " on port " + serverPort + err);
+
+checkConnection(SERVER_HOST, serverPort).then(() => {
+  console.log(`${SERVER_HOST} on port ${serverPort}: success`)
+}, error => {
+  console.log(`${SERVER_HOST} on port ${serverPort}: ${error}`)
 })
 
 
@@ -82,14 +77,14 @@ app.put('/server-loads', (req, res) => {
 
 app.get('/images/*', function (req, res) {
   console.log(`${serverNumber}: get image`, req.path)
-  const file = `.${req.path.replace("images", `images_${serverNumber}`)}`
-  console.log(file);
-  const s = fs.createReadStream(file)
-  s.on('open', function () {
+  const file = `.${req.path.replace('images', `images_${serverNumber}`)}`
+  console.log(file)
+  const fileStream = fs.createReadStream(file)
+  fileStream.on('open', function () {
     res.set('Content-Type', 'image/jpg')
-    s.pipe(res)
+    fileStream.pipe(res)
   })
-  s.on('error', function () {
+  fileStream.on('error', function () {
     res.set('Content-Type', 'text/plain')
     res.status(404).end('Not found')
   })
