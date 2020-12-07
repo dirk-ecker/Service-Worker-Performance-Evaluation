@@ -4,12 +4,9 @@ const imgUrls = [
   './images_lq/1.jpg'
  
 ];
- 
  self.addEventListener('install', (event) => {
     console.log('sw start install', event)
     event.waitUntil(async function () {
-      // const cache = await caches.open('img_cache');
-      // await cache.addAll(imgUrls);
       const cache = await caches.open('img_cache');
       await cache.addAll(imgUrls);
      }());

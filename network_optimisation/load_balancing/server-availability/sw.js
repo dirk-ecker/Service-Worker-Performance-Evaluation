@@ -17,11 +17,11 @@ const handleImageRequest = async request => {
       console.log('get image from server', actualServerNumber)
       const url = new URL(request.url)
       const fetchController = new AbortController()
-      // we are waiting 100 msec otherwise abort the fetch
+      // we are waiting 50 ms otherwise abort the fetch 
       const timeoutHandle = setTimeout(() => {
         fetchController.abort()
-      }, 100)
-      // we got it below 100 msec
+      }, 50)
+      // we got it below 50 ms
       const serverNumber = actualServerNumber
       actualServerNumber = (actualServerNumber + 1) % NUMBER_OF_SERVERS
       const response = await fetch(`${actualServerUrl(serverNumber)}${url.pathname}`, {signal: fetchController.signal})

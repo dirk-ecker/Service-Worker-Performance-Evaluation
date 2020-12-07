@@ -21,8 +21,10 @@ app.listen(serverPort, function () {
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Credentials', 'true')
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+  // res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+  res.header('Access-Control-Allow-Headers', "*")
   // intercept OPTIONS method
   if ('OPTIONS' === req.method) {
     res.sendStatus(200)
@@ -59,20 +61,20 @@ checkConnection(SERVER_HOST, serverPort).then(() => {
 
 
 // Query servers loads.
-app.get('/server-loads', (req, res) => {
-  const loads = sessions[req.query.session]
-  console.log(`${serverNumber}: get loads for session ${req.query.session}`, loads)
-  res.json(loads)
-})
+// app.get('/server-loads', (req, res) => {
+//   const loads = sessions[req.query.session]
+//   console.log(`${serverNumber}: get loads for session ${req.query.session}`, loads)
+//   res.json(loads)
+// })
 
 // Configure servers loads.
-app.put('/server-loads', (req, res) => {
-  const loads = req.body
-  console.log(`${serverNumber}: set loads for session ${req.query.session}`, loads)
-  sessions[req.query.session] = loads
-  res.status(201)
-  res.json(loads)
-})
+// app.put('/server-loads', (req, res) => {
+//   const loads = req.body
+//   console.log(`${serverNumber}: set loads for session ${req.query.session}`, loads)
+//   sessions[req.query.session] = loads
+//   res.status(201)
+//   res.json(loads)
+// })
 
 
 app.get('/images/*', function (req, res) {

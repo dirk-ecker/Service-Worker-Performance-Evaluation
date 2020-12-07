@@ -1,4 +1,4 @@
-(async (document, navigator,window) => {
+(async (document, navigator) => {
 
   const $ = document.querySelector.bind(document)
 
@@ -20,4 +20,4 @@
   } catch(error) {
     console.log(`sw registration failed: ${error}`)
   }
-})(document, navigator, window)
+})(document, navigator)
