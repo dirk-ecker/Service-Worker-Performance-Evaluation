@@ -5,7 +5,7 @@
         const imgUrl = $('select').value
         if (imgUrl) {
             $('img').src = imgUrl
-            print_PerformanceEntries(imgUrl)
+            //print_PerformanceEntries(imgUrl)
         }
     }
     $('#image-selector').disabled = false

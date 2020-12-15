@@ -2,8 +2,8 @@
   // register service worker
   try {
     const registration = await navigator.serviceWorker.register('./sw.js')
-    registration && console.log(`sw registered, scope: ${registration.scope}`)
-
+    registration  
+    //console.log(`sw registered, scope: ${registration.scope}`)
     navigator.serviceWorker.ready.then(() => {
       $('#image-selector').disabled = false
     })

@@ -13,10 +13,9 @@ function Sleep(milliseconds) {
         //const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
         const page = await browser.newPage();
         const client = await page.target().createCDPSession(); //connect to devTools
-        await page.goto('http://localhost:8080', {waitUntil: 'domcontentloaded'});
-        await Sleep(5000);
+        
         //  redirect logs from page to console
-        function consoleLog() {
+        // function consoleLog() {
         page.on('console', consoleObj => {
             const text = consoleObj.text();
             console.log('[Page] '+text);
@@ -27,8 +26,9 @@ function Sleep(milliseconds) {
                 testStack.push(results);
             }
             });
-        }
-     
+        // }
+     await page.goto('http://localhost:8080', {waitUntil: 'domcontentloaded'});
+        await Sleep(5000);
         for (let k = 1; k<=3; k++) {
             await page.select("select#image-selector", "images/"+`${k}`+".jpg");
             await Sleep(5000);
@@ -42,7 +42,7 @@ function Sleep(milliseconds) {
             console.log(logoResourceTiming);
             console.log("resource timing:" + imgTiming .toFixed(4) + " ms");
             // get resource data
-            await consoleLog();
+            // await consoleLog();
         };
            
         await browser.close();

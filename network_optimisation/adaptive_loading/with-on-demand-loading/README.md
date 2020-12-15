@@ -28,3 +28,5 @@ Image is served through HTML select element. Select element is used after the DO
 - SW Events in the console
 - Another metrics ?
 # Results
+
+- Puppeteer doesn't react to standart connection paramteres - https://developer.mozilla.org/en-US/docs/Glossary/Effective_connection_type. In order to get 2g from puppeteer, take the minumum latency RTT 2000ms. 

@@ -20,21 +20,21 @@
 <body>
   <div class="container-fluid">
     <div class="container">
-      <h1>Browser Cache</h1>
-      <div id="row"></div>
+      <div id="row">
+      </div>
       <script>
         //Loading of image files - from Memory Cache
         imgUrls = [];
         const image = num => {
           for (let i = 1; i < num + 1; i++) {
             const img = document.createElement("img")
-            const imgPath = img.src = "images_hq/" + i + ".jpg"
+            const imgPath = img.src = `images_lq/1 - Kopie (${i})`+ ".jpg"
             const row = document.getElementById("row")
             row.appendChild(img)
             imgUrls.push(imgPath);
           }
         }
-        image(10)
+        image(100)
       </script>
     </div>
   </div>

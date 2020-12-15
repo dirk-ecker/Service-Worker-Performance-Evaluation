@@ -17,7 +17,9 @@
     const registration = await navigator.serviceWorker.register('./sw.js')
     navigator.serviceWorker.ready.then(enableUI)
     registration && console.log(`sw registered, scope: ${registration.scope}`)
-  } catch(error) {
+  } catch (error) {
     console.log(`sw registration failed: ${error}`)
   }
+ 
+
 })(document, navigator)

@@ -3,8 +3,8 @@
   // register service worker
   try {
     const registration = await navigator.serviceWorker.register('./sw.js')
-    registration && console.log(`sw registered, scope: ${registration.scope}`)
-
+   // registration && console.log(`sw registered, scope: ${registration.scope}`)
+      registration
     navigator.serviceWorker.ready.then(() => {
       $('#image-selector').disabled = false
     })
@@ -12,4 +12,6 @@
     console.log(`sw registration failed: ${error}`)
   }
   // navigator?.connection && console.log(navigator.connection)
+
+
 })(navigator)

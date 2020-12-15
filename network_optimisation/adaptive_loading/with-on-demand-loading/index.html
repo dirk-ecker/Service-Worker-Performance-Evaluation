@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaptive Loading with Service Worker</title>
 </head>
+
 <body>
   <div>
     <h1>Adaptive Loading with Service Worker</h1>
@@ -14,18 +16,24 @@
     </select>
     <p><img src="" alt="" /></p>
   </div>
-  <script>
-  const $ = document.querySelector.bind(document)
+<script>
+    const $ = document.querySelector.bind(document)
   // add image selection listener to select
   $('#image-selector').onchange = () => {
     const imgUrl = $('select').value
     if (imgUrl) {
       $('img').src = imgUrl
-      print_PerformanceEntries(imgUrl)
+      print_PerformanceEntries()
     }
   }
-  </script>
-  <script src ="index.js"></script>
-  <script src ="perf.js"></script>
+  // communication channel with sw:
+  const channel = new BroadcastChannel('sw-messages');
+  channel.addEventListener('message', event => {
+    console.log('Image path', JSON.stringify(event.data));
+  });
+</script>
+  <script src="index.js"></script>
+  <!-- <script src ="perf.js"></script> -->
 </body>
+
 </html>

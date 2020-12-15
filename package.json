@@ -24,6 +24,8 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "net": "^1.0.2",
-    "puppeteer": "^5.5.0"
+    "puppeteer": "^5.5.0",
+    "puppeteer-cluster": "^0.22.0",
+    "server-timing": "^3.3.1"
   }
 }

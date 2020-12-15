@@ -23,11 +23,16 @@
       const imgUrl = $('select').value
       if (imgUrl) {
         $('img').src = imgUrl
-        print_PerformanceEntries(imgUrl)
+        //print_PerformanceEntries(imgUrl)
       }
     }
+    // From your client pages:
+    const channel = new BroadcastChannel('sw-messages');
+    channel.addEventListener('message', event => {
+    console.log('SW status', JSON.stringify(event.data));
+    });
   </script>
-  <script src="perf.js"></script>
+  <!-- <script src="perf.js"></script> -->
   <script src="index.js"></script>
 </body>
 

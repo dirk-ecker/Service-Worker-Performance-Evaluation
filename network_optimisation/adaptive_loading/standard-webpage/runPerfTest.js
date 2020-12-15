@@ -1,71 +1,63 @@
 
 const puppeteer = require('puppeteer');
-
+const fs = require ('fs');
 function Sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
 (async () => {
     const testStack = [];
-    const repeat = 1;
-    let NETWORK_PRESETS = {
-        'GPRS': {
-          'offline': false,
-          'downloadThroughput': 50 * 1024 / 8,
-          'uploadThroughput': 20 * 1024 / 8,
-          'latency': 500
+    const repeat = 50;
+    let written = false;   
+      let CUSTOM_PRESETS = {
+        '2g': {
+          // Simulated upload speed (bytes/s)
+          downloadThroughput: 250 * 1024 / 8,
+          // Simulated upload speed (bytes/s)
+          uploadThroughput: 50 * 1024 / 8,
+           // Simulated latency (ms)
+          latency: 400 * 5,
+          offline: false,
         },
-        'Regular2G': {
-          'offline': false,
-          'downloadThroughput': 250 * 1024 / 8,
-          'uploadThroughput': 50 * 1024 / 8,
-          'latency': 300
+        '3g': {
+          // Simulated download speed (bytes/s)
+          downloadThroughput: 750 * 1024 / 8,
+          // Simulated upload speed (bytes/s)
+          uploadThroughput: 250 * 1024 / 8,
+          // Simulated latency (ms)
+          latency: 150 * 3.75,
+          offline: false,
         },
-        'Good2G': {
-          'offline': false,
-          'downloadThroughput': 450 * 1024 / 8,
-          'uploadThroughput': 150 * 1024 / 8,
-          'latency': 150
+        '4g': {        
+           // Simulated upload speed (bytes/s)
+          downloadThroughput: 4 * 1024 * 1024 / 8,
+          // Simulated upload speed (bytes/s)
+          uploadThroughput: 3 * 1024 * 1024 / 8,
+          // Simulated latency (ms)
+          latency: 20,
+          offline: false
         },
-        'Regular3G': {
-          'offline': false,
-          'downloadThroughput': 750 * 1024 / 8,
-          'uploadThroughput': 250 * 1024 / 8,
-          'latency': 100
-        },
-        'Good3G': {
-          'offline': false,
-          'downloadThroughput': 1.5 * 1024 * 1024 / 8,
-          'uploadThroughput': 750 * 1024 / 8,
-          'latency': 40
-        },
-        'Regular4G': {
-          'offline': false,
-          'downloadThroughput': 4 * 1024 * 1024 / 8,
-          'uploadThroughput': 3 * 1024 * 1024 / 8,
-          'latency': 20
-        },
-        'DSL': {
-          'offline': false,
-          'downloadThroughput': 2 * 1024 * 1024 / 8,
-          'uploadThroughput': 1 * 1024 * 1024 / 8,
-          'latency': 5
-        },
-        'WiFi': {
-          'offline': false,
-          'downloadThroughput': 30 * 1024 * 1024 / 8,
-          'uploadThroughput': 15 * 1024 * 1024 / 8,
-          'latency': 2
-        }
       }
+      
     for (let i = 0 ; i < repeat; i++) {
-        const browser = await puppeteer.launch({headless:false});
+        const browser = await puppeteer.launch({headless:true});
         //const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
         const page = await browser.newPage();
         const client = await page.target().createCDPSession(); //connect to devTools
+        
         await client.send('Network.enable');
-        await client.send('Network.emulateNetworkConditions', NETWORK_PRESETS['Regular2G']);
-        await page.goto('http://localhost:8080', {waitUntil: 'domcontentloaded'});
+        await client.send('Network.emulateNetworkConditions', CUSTOM_PRESETS['2g']);
+        await page.goto('http://localhost:8080', {waitUntil: 'domcontentloaded'})
+
+         let connType =  await page.evaluate(() => navigator.connection.effectiveType);
+         let iternum = "-----------"+`${connType}`+"----------" + '\n';
+      
+         if (written==false) {
+           fs.writeFileSync('perfData.json', iternum, {flag:"a"});
+           written = true;
+         }
+        
+        // fs.writeFileSync('perfData.json', connType, {flag:"a"})
         
         //  redirect logs from page to console
         function consoleLog() {
@@ -82,9 +74,10 @@ function Sleep(milliseconds) {
         }
    
         await consoleLog();
-        await Sleep(10000);
+        await Sleep(3000);
 
         await page.select("select#image-selector", "images/example.jpg");    
+        // increased wait, depending on the network type (20s for 2g, 10 for 3g, 5 for 4g)
         await Sleep(10000);
         
         const resourceTimingJson = await page.evaluate(() =>
@@ -93,9 +86,11 @@ function Sleep(milliseconds) {
         const logoResourceTiming = resourceTiming.find(element => element.name.includes('.jpg'))        
         properties = ["fetchStart", "responseEnd"];
         const imgTiming = logoResourceTiming[properties[1]] - logoResourceTiming[properties[0]];
-        console.log(logoResourceTiming);
-        console.log("resource timing:" + imgTiming .toFixed(4) + " ms");
-          
+        //console.log(logoResourceTiming);
+        //console.log("resource timing:" + imgTiming .toFixed(4) + " ms");
+        console.log("\n" + imgTiming .toFixed(4));
+        const resTime = '\n' + JSON.stringify(imgTiming);
+        fs.writeFileSync('perfData.json', resTime, {flag:"a"});  
         await browser.close();
     }
 

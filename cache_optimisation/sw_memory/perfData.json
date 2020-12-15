@@ -1,0 +1,12 @@
+
+-----------1----------
+---------Initial Request--------
+
+first-paint : 466.8150 ms.
+first-contentful-paint : 466.8150 ms.min time:30.7000max time: 1228.4150
+Page full load time: 1618.0650
+ ---------Reload--------
+
+first-paint : 480.1400 ms.
+first-contentful-paint : 480.1400 ms.min time:31.3950max time: 127.3450
+Page full load time: 729.8800

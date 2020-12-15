@@ -5,7 +5,7 @@ function print_PerformanceEntries(value) {
   for (var i=0; i < p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
-  console.log(value)
+ // console.log(value)
 }
 
 function print_start_and_end_properties(perfEntry) {

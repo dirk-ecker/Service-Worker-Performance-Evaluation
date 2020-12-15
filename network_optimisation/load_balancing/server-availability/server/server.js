@@ -4,11 +4,15 @@ const bodyParser = require('body-parser')
 
 const net = require('net')
 const Promise = require('bluebird')
+const serverTiming = require('server-timing')
 
 const app = express()
 
 // Allow express to parse the body of the requests.
 app.use(bodyParser.json())
+
+// Server Timing
+app.use(serverTiming());
 
 // Simple session handling with a hash of sessions.
 const SERVER_HOST = 'localhost'
@@ -24,13 +28,13 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', 'true')
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
   // res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-  res.header('Access-Control-Allow-Headers', "*")
   // intercept OPTIONS method
   if ('OPTIONS' === req.method) {
     res.sendStatus(200)
   } else {
     next()
   }
+  
 })
 
 // check if server is running and accepting connections
@@ -78,6 +82,7 @@ checkConnection(SERVER_HOST, serverPort).then(() => {
 
 
 app.get('/images/*', function (req, res) {
+  let start = Date.now();
   console.log(`${serverNumber}: get image`, req.path)
   const file = `.${req.path.replace('images', `images_${serverNumber}`)}`
   console.log(file)
@@ -90,4 +95,9 @@ app.get('/images/*', function (req, res) {
     res.set('Content-Type', 'text/plain')
     res.status(404).end('Not found')
   })
+  res.setMetric('response', (Date.now() - start), `Response from server ${serverNumber}`)
+  console.log("total response time " + (Date.now() - start));
 })
+
+
+

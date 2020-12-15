@@ -14,6 +14,9 @@ const handleImageRequest = async request => {
   let tries = 0
   while (tries < 10) {
     try {
+        // post from sw.js:
+      const channel = new BroadcastChannel('sw-messages');
+      channel.postMessage({serverNumber: actualServerNumber});
       console.log('get image from server', actualServerNumber)
       const url = new URL(request.url)
       const fetchController = new AbortController()
@@ -61,5 +64,14 @@ self.onfetch = event => {
     console.log('other request')
     event.respondWith(fetch(request))
   }
+
 }
+
+ 
+
+
+
+
+
+
 

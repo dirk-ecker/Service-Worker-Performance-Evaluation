@@ -1,5 +1,6 @@
 
 const puppeteer = require('puppeteer');
+const fs = require ('fs');
 
 function Sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -7,37 +8,40 @@ function Sleep(milliseconds) {
 
 (async () => {
     const testStack = [];
-    const repeat = 1;
+    const repeat = 50;
   
     for (let i = 0 ; i < repeat; i++) {
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({headless:true});
          //const browser = await puppeteer.launch({executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', headless:true});
         const page = await browser.newPage();
         await page.goto('http://localhost:8080', {waitUntil: 'domcontentloaded'});
-        await consoleLog();     
-    
-      //  redirect logs from page to console
-      function consoleLog() {
+        let iternum = '\n' + "-----------"+`${i+1}`+"----------";
+        fs.writeFileSync('perfData.json', iternum, {flag:"a"});
+        let init = '\n' + "---------Initial Request--------" + '\n'
+        fs.writeFileSync('perfData.json', init, {flag:"a"}); 
+        
+        await consoleLog();
+
+        //  redirect logs from page to console
+        function consoleLog() {
         page.on('console', consoleObj => {
             const text = consoleObj.text();
             console.log('[Page] '+text);
-            // if (text.startsWith('[showResourceTimingsResult]')) {
-            //     const splitted = text.split(' ');
-            //     const results = JSON.parse(splitted[2]);
-            //     console.log('Results', splitted[1], results);
-            //     testStack.push(results);
-            // }
-        });
-    }
+            fs.writeFileSync('perfData.json', text, {flag:"a"});
+            });
+        }   
+        
+        
+        await Sleep(10000);
+        let rel = '\n' + " ---------Reload--------" +'\n'
+        fs.writeFileSync('perfData.json', rel, {flag:"a"})
+        await page.reload({
+        waitUntil: ["networkidle0", "domcontentloaded"] });
+        await Sleep(10000); 
+              
+        await browser.close();
+        }
 
-       await Sleep(10000);
-       await console.log("------Initial Request-------");
-       await page.reload({ waitUntil: ["networkidle0", "domcontentloaded"] });
-       await Sleep(10000);
-       await console.log("------Reload-------");
-       await browser.close();
-    }
+        //console.log('\n\n Got restults:\n ', testStack);
 
-     //console.log('\n\n Got restults:\n ', testStack);
-
-})();
+    })();

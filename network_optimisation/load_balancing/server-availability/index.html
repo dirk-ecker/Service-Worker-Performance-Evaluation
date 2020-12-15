@@ -20,7 +20,13 @@
   <option value="images/3.jpg">Image 3</option>
 </select>
 <p><img src="" alt="" /></p>
-
+<script>
+// From your client pages:
+const channel = new BroadcastChannel('sw-messages');
+channel.addEventListener('message', event => {
+  console.log('Received', JSON.stringify(event.data));
+});
+</script>
 <script src="./index.js"></script>
 </body>
 </html>
